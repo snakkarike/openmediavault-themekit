@@ -1,0 +1,7 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: 'system.themekit'
+  text: _('Theme Kit')
+  icon: 'mdi:palette'
+  url: '/system/themekit'

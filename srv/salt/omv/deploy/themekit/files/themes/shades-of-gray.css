@@ -1,0 +1,301 @@
+/* Shades of Gray */
+
+:root {
+
+--color-pageBackground: hsl(0, 0%,  90%);
+--color-pageText: hsl(0, 0%,  20%);
+--color-pageTextSubdued: hsl(0, 0%,  55%);
+
+--color-pageBackgroundModalActive: hsl(0, 0%,  80%);
+--color-pageBackgroundTopLeft: hsl(0, 0%,  94%);
+--color-pageBackgroundBottomRight: hsl(0, 0%,  86%);
+--color-pageBackgroundLineTop: #fff;
+--color-pageBackgroundLineMid: hsl(0, 0%,  94%);
+--color-pageBackgroundLineBottom: hsl(0, 0%,  86%);
+--color-pageTextLight: hsl(0, 0%,  49%);
+--color-pageTextDark: hsl(0, 0%,  23%);
+--color-pageTextPositive: #29a329;
+--color-pageTextLink: #00b3b3;
+--color-pageTextLinkLight: #00cccc;
+
+--color-numberPositive: #147d64;
+--color-numberNegative: #e12d39;
+--color-numberNeutral: hsl(0, 0%,  55%);
+
+
+--color-cardBackground: #fff;
+--color-cardBorder: hsl(0, 0%,  37%);
+--color-cardShadow: hsl(0, 0%,  31%);
+
+--color-tableBackground: hsl(0, 0%,  94%);
+--color-tableBorder: hsl(0, 0%,  99%);
+--color-tableText: hsl(0, 0%,  15%);
+--color-tableTextSubdued: hsl(0, 0%,  55%);
+--color-tableBorderHover: #99ffff; /* hsl(0, 0%,  60%) */
+--color-tableRowBackgroundHover: hsl(0, 0%,  99%);
+
+--color-tableTextLight: hsl(0, 0%, 45%);
+--color-tableTextSelected: hsl(0, 0%, 31%);
+--color-tableTextHover: hsl(0, 0%, 16%);
+--color-tableTextInactive: hsl(0, 0%, 49%);
+--color-tableHeaderText: hsl(0, 0%, 39%);
+--color-tableHeaderBackground: #fff;
+--color-tableBorderSelected: hsl(0, 0%, 41%);
+--color-tableBorderSeparator: hsl(0, 0%, 60%);
+--color-tableRowBackgroundHighlight: hsl(0, 0%, 81%);
+--color-tableRowBackgroundHighlightText: hsl(0, 0%, 31%);
+--color-tableRowHeaderBackground: hsl(0, 0%, 98%);
+--color-tableRowHeaderText: hsl(0, 0%, 23%);
+
+--color-sidebarBackground: hsl(0, 0%, 20%);
+--color-sidebarItemAccentSelected: #99ffff;
+--color-sidebarItemBackgroundHover: hsl(0, 0%, 40%);
+--color-sidebarItemText: #fff;
+--color-sidebarItemTextSelected: #99ffff;
+
+--color-sidebarItemBackgroundPending: #ffff00;
+--color-sidebarItemBackgroundPositive: #29a329;
+--color-sidebarItemBackgroundFailed: #b30000;
+
+--color-sidebarBudgetName: #d3c031;
+--color-tableTextItemAdded: #0000ff;
+--color-sidebarItemTextUpdated: #d3c031;  
+
+--color-menuAutoCompleteTextHeader: hsl(0, 0%, 70%);
+
+--color-menuBackground: #fff;
+--color-menuItemBackground: hsl(0, 0%, 98%);
+--color-menuItemBackgroundHover: hsl(0, 0%, 94%);
+--color-menuItemText: hsl(0, 0%, 16%);
+--color-menuItemTextHover: hsl(0, 0%, 16%);
+--color-menuItemTextSelected: hsl(0, 0%, 70%);
+--color-menuItemTextHeader: hsl(0, 0%, 60%);
+--color-menuBorder: hsl(0, 0%, 94%);
+--color-menuBorderHover: hsl(0, 0%, 96%);
+--color-menuKeybindingText: hsl(0, 0%, 60%);
+--color-menuAutoCompleteBackground: hsl(0, 0%, 15%);
+--color-menuAutoCompleteBackgroundHover: hsl(0, 0%, 35%);
+--color-menuAutoCompleteText: #fff;
+--color-menuAutoCompleteTextHover: #fff;
+--color-menuAutoCompleteItemTextHover: #fff; /* menuAutoCompleteText */
+--color-menuAutoCompleteItemText: #fff; /* menuAutoCompleteText */
+
+--color-modalBackground: hsl(0, 0%, 95%);
+--color-modalBorder: hsl(0, 0%, 50%);
+
+--color-mobileHeaderBackground: hsl(0, 0%, 60%);
+--color-mobileHeaderText: hsl(0, 0%, 98%);
+--color-mobileHeaderTextSubdued: hsl(0, 0%, 80%);
+--color-mobileHeaderTextHover: rgba(200, 200, 200, .15);
+--color-mobilePageBackground: hsl(0, 0%, 98%);
+--color-mobileNavBackground: #fff;
+--color-mobileNavItem: hsl(0, 0%, 64%);
+--color-mobileNavItemSelected: hsl(0, 0%, 40%);
+--color-mobileAccountShadow: hsl(0, 0%, 70%);
+--color-mobileAccountText: hsl(0, 0%, 35%);
+--color-mobileTransactionSelected: hsl(0, 0%, 50%);
+
+--color-mobileViewTheme: hsl(0, 0%, 60%);
+--color-mobileConfigServerViewTheme: hsl(0, 0%, 50%);
+
+--color-markdownNormal: hsl(0, 0%, 90%);
+--color-markdownDark: hsl(0, 0%, 60%);
+--color-markdownLight: hsl(0, 0%, 96%);
+
+--color-buttonMenuText: hsl(0, 0%, 94%);
+--color-buttonMenuTextHover: hsl(0, 0%, 98%);
+--color-buttonMenuBackground: transparent;
+--color-buttonMenuBackgroundHover: rgba(200, 200, 200, .25);
+--color-buttonMenuBorder: hsl(0, 0%, 48%);
+--color-buttonMenuSelectedText: hsl(0, 0%, 23%);
+--color-buttonMenuSelectedTextHover: hsl(0, 0%, 29%);
+--color-buttonMenuSelectedBackground: hsl(0, 0%, 76%);
+--color-buttonMenuSelectedBackgroundHover: hsl(0, 0%, 66%);
+--color-buttonMenuSelectedBorder: hsl(0, 0%, 76%);
+
+--color-buttonPrimaryDisabledText: hsl(0, 0%, 50%);
+--color-buttonPrimaryText: #000;
+--color-buttonPrimaryTextHover: #000;
+--color-buttonPrimaryBackground: #a6f2f2;
+--color-buttonPrimaryBackgroundHover: #99ffff;
+--color-buttonPrimaryBorder: hsl(0, 0%, 70%);
+--color-buttonPrimaryDisabledBackground: hsl(0, 0%, 70%);
+--color-buttonPrimaryDisabledBorder: hsl(0, 0%, 70%);
+
+--color-buttonPrimaryShadow: rgba(0, 0, 0, 0.6);
+
+--color-buttonNormalText: hsl(0, 0%, 20%);
+--color-buttonNormalTextHover: hsl(0, 0%, 20%);
+--color-buttonNormalBackground: hsl(0, 0%, 98%);
+--color-buttonNormalBackgroundHover: #fff;
+--color-buttonNormalBorder: hsl(0, 0%, 90%);
+--color-buttonNormalShadow: rgba(0, 0, 0, 0.4);
+--color-buttonNormalSelectedText: #fff;
+--color-buttonNormalSelectedBackground: hsl(0, 0%, 47%);
+--color-buttonNormalDisabledText: hsl(0, 0%, 70%);
+--color-buttonNormalDisabledBackground: hsl(0, 0%, 95%);
+--color-buttonNormalDisabledBorder: hsl(0, 0%, 90%);
+
+--color-calendarText: hsl(0, 0%, 98%);
+--color-calendarBackground: hsl(0, 0%, 15%);
+--color-calendarItemText: hsl(0, 0%, 98%);
+--color-calendarItemBackground: hsl(0, 0%, 25%);
+--color-calendarSelectedBackground: hsl(0, 0%, 50%);
+
+--color-buttonBareText: hsl(0, 0%, 20%);
+--color-buttonBareTextHover: hsl(0, 0%, 20%);
+--color-buttonBareBackground: transparent;
+--color-buttonBareBackgroundHover: rgba(100, 100, 100, .15);
+--color-buttonBareBackgroundActive: rgba(100, 100, 100, .25);
+--color-buttonBareDisabledText: hsl(0, 0%, 70%);
+--color-buttonBareDisabledBackground: transparent;
+
+--color-warningText: #cc9900;
+--color-warningTextDark: #cc971b;
+--color-warningBackground: #f2ffcc;
+--color-errorText: #b30000; 
+--color-errorTextDarker: #b30000;
+--color-errorBackground: #f6e1d5;
+--color-noticeText: #29a329;
+--color-noticeBackgroundLight: #f3f3d8;
+--color-noticeTextDark: #747425;
+--color-noticeBackground: #f3f3d8;
+
+--color-noticeBackgroundDark: #f3f3d8;
+--color-noticeTextLight: #29a329;
+--color-noticeTextMenu: #47d147;
+--color-noticeBorder: #0c6b58;
+--color-warningTextLight: #cc9900;
+--color-warningBorder: #cc971b;
+--color-errorTextDark: #b30000;
+--color-errorTextMenu: #ff9999;
+--color-errorBorder: #b30000;
+
+--color-formInputTextHighlight: hsl(0, 0%, 41%);
+
+--color-formLabelText: hsl(0, 0%, 47%);
+--color-formLabelBackground: hsl(0, 0%, 77%);
+--color-formInputBackground: hsl(0, 0%, 98%);
+--color-formInputBackgroundSelected: #fff;
+--color-formInputBackgroundSelection: hsl(0, 0%, 50%);
+--color-formInputBorder: hsl(0, 0%, 80%);
+--color-formInputTextReadOnlySelection: hsl(0, 0%, 98%);
+--color-formInputBorderSelected: hsl(0, 0%, 41%);
+--color-formInputText: hsl(0, 0%, 20%);
+--color-formInputTextSelected: hsl(0, 0%, 98%);
+--color-formInputTextPlaceholder: hsl(0, 0%, 70%);
+--color-formInputTextPlaceholderSelected: hsl(0, 0%, 81%);
+--color-formInputTextSelection: hsl(0, 0%, 94%);
+--color-formInputShadowSelected: hsl(0, 0%, 41%);
+
+--color-checkboxText: hsl(0, 0%, 95%);
+--color-checkboxBackgroundSelected: hsl(0, 0%, 41%);
+--color-checkboxBorderSelected: hsl(0, 0%, 41%);
+--color-checkboxShadowSelected: hsl(0, 0%, 41%);
+--color-checkboxToggleBackground: hsl(0, 0%, 50%);
+--color-checkboxToggleBackgroundSelected: hsl(0, 0%, 41%);
+--color-checkboxToggleDisabled: hsl(0, 0%, 77%);
+
+--color-pillBackground: hsl(0, 0%, 80%);
+--color-pillBackgroundLight: hsl(0, 0%, 98%);
+--color-pillText: #000;
+--color-pillTextHighlighted: hsl(0, 0%, 41%);
+--color-pillBorder: hsl(0, 0%, 90%);
+--color-pillBorderDark: hsl(0, 0%, 70%);
+--color-pillBackgroundSelected: #99ffff; /* hsl(0, 0%, 85%); */
+--color-pillTextSelected: hsl(0, 0%, 27%);
+--color-pillBorderSelected: hsl(0, 0%, 41%);
+--color-pillTextSubdued: hsl(0, 0%, 81%);
+
+
+--color-reportsRed: #df5a49;
+--color-reportsBlue: #40a5f7;
+--color-reportsGreen: #3ebd93;
+--color-reportsGray: #747c8b;
+--color-reportsLabel: #102a43;
+--color-reportsInnerLabel: #243b53;
+--color-reportsNumberPositive: #00cccc;
+--color-reportsNumberNegative: #df5a49;
+  
+--color-noteTagBackground: #e4d4ff;
+--color-noteTagBackgroundHover: #dac4ff;
+--color-noteTagDefault: #e4d4ff;
+--color-noteTagText: #000;
+
+--color-upcomingText: #000000;
+--color-upcomingBorder: hsl(0, 0%, 35%);
+--color-upcomingBackground: hsl(285, 25%, 90%);
+
+--color-budgetOtherMonth: hsl(0, 0%, 92%);
+--color-budgetCurrentMonth: hsl(0, 0%, 94%);
+--color-budgetHeaderOtherMonth: hsl(0, 0%, 95%);
+--color-budgetHeaderCurrentMonth: hsl(0, 0%, 98%);
+--color-budgetNumberZero: hsl(0, 0%,  60%);  
+
+--color-budgetNumberNegative: #e12d39;
+--color-budgetNumberNeutral: #272630;
+--color-budgetNumberPositive: #272630;
+--color-templateNumberFunded: #147d64;
+--color-templateNumberUnderFunded: #b88115;
+--color-toBudgetPositive: #147d64;
+--color-toBudgetZero: #147d64;
+--color-toBudgetNegative: #e12d39;
+
+
+--color-floatingActionBarBackground: hsl(0, 0%, 60%);
+--color-floatingActionBarBorder: hsl(0, 0%, 60%);
+--color-floatingActionBarText: hsl(0, 0%, 98%);
+
+--color-tooltipText: hsl(0, 0%, 20%);
+--color-tooltipBackground: #fff;
+--color-tooltipBorder: hsl(0, 0%, 90%);
+
+--color-calendarCellBackground: hsl(0, 0%, 94%);
+
+--color-overlayBackground: rgba(0, 0, 0, 0.3);
+
+--color-reportsNumberPositive: #00cccc;  
+
+}
+
+/* --- OMV AUTOMATED MAPPING --- */
+:root, .omv-dark-theme {
+  --theme-primary: var(--color-buttonPrimaryBackground, var(--color-sidebarBackground, #5dacdf));
+}
+
+body, .omv-dark-theme, .mat-app-background, .mat-typography {
+  background-color: var(--color-pageBackground) !important;
+  --mat-background-color-body: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer-container, .omv-dark-theme .mat-drawer-container {
+  background-color: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer, .omv-dark-theme .mat-drawer {
+  background-color: var(--color-sidebarBackground) !important;
+  color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+/* Navbar / Sidebar text colors */
+.mat-drawer .mat-list-item,
+.omv-dark-theme .mat-drawer .mat-list-item,
+.mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.omv-dark-theme .mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.mat-drawer a, .omv-dark-theme .mat-drawer a {
+    color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+.mat-card, .omv-dark-theme .mat-card {
+  background-color: var(--color-cardBackground, var(--color-pageBackground)) !important;
+  color: var(--color-pageText) !important;
+}
+
+/* Datatable Text */
+.ngx-datatable, .omv-dark-theme .ngx-datatable,
+.ngx-datatable .datatable-body-cell, .omv-dark-theme .ngx-datatable .datatable-body-cell,
+.ngx-datatable .datatable-header-cell, .omv-dark-theme .ngx-datatable .datatable-header-cell {
+  color: var(--color-tableText, var(--color-pageText)) !important;
+}

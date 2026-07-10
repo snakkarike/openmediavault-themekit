@@ -1,0 +1,240 @@
+/* CSS for actualbudget-matrix-theme */
+
+:root {
+  --color-pageBackground: #000000;
+  --color-pageBackgroundModalActive: #001a00;
+  --color-pageBackgroundTopLeft: #000d00;
+  --color-pageBackgroundBottomRight: #001a00;
+  --color-pageBackgroundLineTop: #00ff41;
+  --color-pageBackgroundLineMid: #000d00;
+  --color-pageBackgroundLineBottom: #00ff00;
+  --color-pageText: #00ff41;
+  --color-pageTextLight: #39ff14;
+  --color-pageTextSubdued: #00cc33;
+  --color-pageTextDark: #00ff00;
+  --color-pageTextPositive: #00ff41;
+  --color-pageTextLink: #00ff41;
+  --color-pageTextLinkLight: #39ff14;
+  --color-cardBackground: #001a00;
+  --color-cardBorder: #00ff41;
+  --color-cardShadow: #000800;
+  --color-tableBackground: #001100;
+  --color-tableRowBackgroundHover: #002200;
+  --color-tableText: #00ff41;
+  --color-tableTextLight: #00ff41;
+  --color-tableTextSubdued: #00cc33;
+  --color-tableTextSelected: #00ff00;
+  --color-tableTextHover: #39ff14;
+  --color-tableTextInactive: #006622;
+  --color-tableHeaderText: #39ff14;
+  --color-tableHeaderBackground: #001a00;
+  --color-tableBorder: #004400;
+  --color-tableBorderSelected: #00ff41;
+  --color-tableBorderHover: #00ff00;
+  --color-tableBorderSeparator: #003300;
+  --color-tableRowBackgroundHighlight: #002200;
+  --color-tableRowBackgroundHighlightText: #00ff41;
+  --color-tableRowHeaderBackground: #001a00;
+  --color-tableRowHeaderText: #00ff41;
+  --color-sidebarBackground: #002200;
+  --color-sidebarItemBackgroundPending: #ff6600;
+  --color-sidebarItemBackgroundPositive: #00ff41;
+  --color-sidebarItemBackgroundFailed: #ff3333;
+  --color-sidebarItemAccentSelected: #00ff00;
+  --color-sidebarItemBackgroundHover: #003300;
+  --color-sidebarItemText: #00ff41;
+  --color-sidebarItemTextSelected: #00ff00;
+  --color-sidebarBudgetName: #39ff14;
+  --color-menuBackground: #001100;
+  --color-menuItemBackground: #001100;
+  --color-menuItemBackgroundHover: #002200;
+  --color-menuItemText: #00ff41;
+  --color-menuItemTextHover: #00ff00;
+  --color-menuItemTextSelected: #00ff41;
+  --color-menuItemTextHeader: #39ff14;
+  --color-menuBorder: #004400;
+  --color-menuBorderHover: #00ff41;
+  --color-menuKeybindingText: #39ff14;
+  --color-menuAutoCompleteBackground: #000d00;
+  --color-menuAutoCompleteBackgroundHover: #002200;
+  --color-menuAutoCompleteText: #00ff41;
+  --color-menuAutoCompleteTextHeader: #39ff14;
+  --color-menuAutoCompleteItemText: #00ff41;
+  --color-modalBackground: #001a00;
+  --color-modalBorder: #00ff41;
+  --color-mobileHeaderBackground: #001a00;
+  --color-mobileHeaderText: #00ff41;
+  --color-mobileHeaderTextSubdued: #00cc33;
+  --color-mobileHeaderTextHover: rgba(0, 255, 65, 0.15);
+  --color-mobilePageBackground: #001100;
+  --color-mobileNavBackground: #001100;
+  --color-mobileNavItem: #00ff41;
+  --color-mobileNavItemSelected: #00ff41;
+  --color-mobileAccountShadow: #000800;
+  --color-mobileAccountText: #00ff41;
+  --color-mobileTransactionSelected: #00ff41;
+  --color-mobileViewTheme: #001a00;
+  --color-mobileConfigServerViewTheme: #00ff41;
+  --color-markdownNormal: #002200;
+  --color-markdownDark: #001a00;
+  --color-markdownLight: #003300;
+  --color-buttonMenuText: #00ff41;
+  --color-buttonMenuTextHover: #00ff41;
+  --color-buttonMenuBackground: transparent;
+  --color-buttonMenuBackgroundHover: rgba(0, 255, 65, 0.25);
+  --color-buttonMenuBorder: #004400;
+  --color-buttonMenuSelectedText: #00ff00;
+  --color-buttonMenuSelectedTextHover: #39ff14;
+  --color-buttonMenuSelectedBackground: #002200;
+  --color-buttonMenuSelectedBackgroundHover: #003300;
+  --color-buttonMenuSelectedBorder: #00ff41;
+  --color-buttonPrimaryText: #000000;
+  --color-buttonPrimaryTextHover: #000000;
+  --color-buttonPrimaryBackground: #00ff41;
+  --color-buttonPrimaryBackgroundHover: #00ff00;
+  --color-buttonPrimaryBorder: #00ff41;
+  --color-buttonPrimaryShadow: rgba(0, 255, 65, 0.6);
+  --color-buttonPrimaryDisabledText: #003300;
+  --color-buttonPrimaryDisabledBackground: #001100;
+  --color-buttonPrimaryDisabledBorder: #001100;
+  --color-buttonNormalText: #00ff41;
+  --color-buttonNormalTextHover: #00ff41;
+  --color-buttonNormalBackground: #001100;
+  --color-buttonNormalBackgroundHover: #002200;
+  --color-buttonNormalBorder: #00ff41;
+  --color-buttonNormalShadow: rgba(0, 255, 65, 0.4);
+  --color-buttonNormalSelectedText: #000000;
+  --color-buttonNormalSelectedBackground: #00ff41;
+  --color-buttonNormalDisabledText: #006622;
+  --color-buttonNormalDisabledBackground: #001100;
+  --color-buttonNormalDisabledBorder: #004400;
+  --color-calendarText: #00ff41;
+  --color-calendarBackground: #000d00;
+  --color-calendarItemText: #00ff41;
+  --color-calendarItemBackground: #001100;
+  --color-calendarSelectedBackground: #00ff41;
+  --color-buttonBareText: #00ff41;
+  --color-buttonBareTextHover: #00ff41;
+  --color-buttonBareBackground: transparent;
+  --color-buttonBareBackgroundHover: rgba(0, 255, 65, 0.3);
+  --color-buttonBareBackgroundActive: rgba(0, 255, 65, 0.5);
+  --color-buttonBareDisabledText: #006622;
+  --color-buttonBareDisabledBackground: transparent;
+  --color-noticeBackground: #002200;
+  --color-noticeBackgroundLight: #003300;
+  --color-noticeBackgroundDark: #00ff41;
+  --color-noticeText: #00ff41;
+  --color-noticeTextLight: #39ff14;
+  --color-noticeTextDark: #000000;
+  --color-noticeTextMenu: #39ff14;
+  --color-noticeBorder: #00ff41;
+  --color-warningBackground: #663300;
+  --color-warningText: #ff9900;
+  --color-warningTextLight: #ffcc00;
+  --color-warningTextDark: #ff6600;
+  --color-warningBorder: #ff9900;
+  --color-errorBackground: #330000;
+  --color-errorText: #ff3333;
+  --color-errorTextDark: #ff6666;
+  --color-errorTextDarker: #ff6666;
+  --color-errorTextMenu: #ff3333;
+  --color-errorBorder: #ff3333;
+  --color-upcomingBackground: #001a00;
+  --color-upcomingText: #00ff41;
+  --color-upcomingBorder: #004400;
+  --color-formLabelText: #39ff14;
+  --color-formInputBackground: #001100;
+  --color-formInputBackgroundSelected: #002200;
+  --color-formInputBackgroundSelection: #00ff41;
+  --color-formInputBorder: #004400;
+  --color-formInputTextReadOnlySelection: #001100;
+  --color-formInputBorderSelected: #00ff41;
+  --color-formInputText: #00ff41;
+  --color-formInputTextSelected: #000000;
+  --color-formInputTextPlaceholder: #00ff41;
+  --color-formInputTextPlaceholderSelected: #00ff00;
+  --color-formInputTextSelection: #001100;
+  --color-formInputShadowSelected: #39ff14;
+  --color-formInputTextHighlight: #00ff41;
+  --color-checkboxText: #00ff41;
+  --color-checkboxBackgroundSelected: #00ff41;
+  --color-checkboxBorderSelected: #00ff41;
+  --color-checkboxShadowSelected: #00ff00;
+  --color-checkboxToggleBackground: #001a00;
+  --color-checkboxToggleBackgroundSelected: #00ff41;
+  --color-checkboxToggleDisabled: #004400;
+  --color-pillBackground: #001100;
+  --color-pillBackgroundLight: #000d00;
+  --color-pillText: #00ff41;
+  --color-pillTextHighlighted: #39ff14;
+  --color-pillBorder: #004400;
+  --color-pillBorderDark: #004400;
+  --color-pillBackgroundSelected: #00ff41;
+  --color-pillTextSelected: #000000;
+  --color-pillBorderSelected: #00ff41;
+  --color-pillTextSubdued: #006622;
+  --color-reportsRed: #ff3333;
+  --color-reportsBlue: #00ff41;
+  --color-reportsGreen: #00ff00;
+  --color-reportsGray: #006622;
+  --color-reportsLabel: #00ff41;
+  --color-reportsInnerLabel: #001100;
+  --color-noteTagBackground: #001a00;
+  --color-noteTagBackgroundHover: #00ff41;
+  --color-noteTagDefault: #001a00;
+  --color-noteTagText: #00ff41;
+  --color-budgetOtherMonth: #000d00;
+  --color-budgetCurrentMonth: #001100;
+  --color-budgetHeaderOtherMonth: #001100;
+  --color-budgetHeaderCurrentMonth: #001a00;
+  --color-floatingActionBarBackground: #001a00;
+  --color-floatingActionBarBorder: #00ff41;
+  --color-floatingActionBarText: #00ff41;
+  --color-tooltipText: #00ff00;
+  --color-tooltipBackground: #001100;
+  --color-tooltipBorder: #00ff41;
+  --color-calendarCellBackground: #000d00;
+  --color-overlayBackground: rgba(0, 0, 0, 0.8);
+}
+
+/* --- OMV AUTOMATED MAPPING --- */
+:root, .omv-dark-theme {
+  --theme-primary: var(--color-buttonPrimaryBackground, var(--color-sidebarBackground, #5dacdf));
+}
+
+body, .omv-dark-theme, .mat-app-background, .mat-typography {
+  background-color: var(--color-pageBackground) !important;
+  --mat-background-color-body: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer-container, .omv-dark-theme .mat-drawer-container {
+  background-color: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer, .omv-dark-theme .mat-drawer {
+  background-color: var(--color-sidebarBackground) !important;
+  color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+/* Navbar / Sidebar text colors */
+.mat-drawer .mat-list-item,
+.omv-dark-theme .mat-drawer .mat-list-item,
+.mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.omv-dark-theme .mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.mat-drawer a, .omv-dark-theme .mat-drawer a {
+    color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+.mat-card, .omv-dark-theme .mat-card {
+  background-color: var(--color-cardBackground, var(--color-pageBackground)) !important;
+  color: var(--color-pageText) !important;
+}
+
+/* Datatable Text */
+.ngx-datatable, .omv-dark-theme .ngx-datatable,
+.ngx-datatable .datatable-body-cell, .omv-dark-theme .ngx-datatable .datatable-body-cell,
+.ngx-datatable .datatable-header-cell, .omv-dark-theme .ngx-datatable .datatable-header-cell {
+  color: var(--color-tableText, var(--color-pageText)) !important;
+}

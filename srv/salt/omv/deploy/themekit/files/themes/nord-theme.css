@@ -1,0 +1,347 @@
+/*
+ * Nord Theme for Actual Budget
+ * Inspired by the Nord color palette — arctic blues, aurora accents
+ * https://www.nordtheme.com/docs/colors-and-palettes
+ *
+ * Palette Foundation:
+ * BG_DEEP    = #2E3440 (Nord0 — darkest, page/sidebar)
+ * BG_BASE    = #3B4252 (Nord1 — tables, budget columns)
+ * BG_RAISED  = #434C5E (Nord2 — cards, modals, menus)
+ * BG_HOVER   = #4C566A (Nord3 — hover states)
+ * BORDER     = #4C566A (Nord3)
+ * BORDER_ALT = #3B4252 (Nord1)
+ *
+ * TEXT_PRIMARY   = #ECEFF4 (Nord6 — main text)
+ * TEXT_SECONDARY = #E5E9F0 (Nord5)
+ * TEXT_MUTED     = #D8DEE9 (Nord4)
+ * TEXT_DIM       = #81A1C1 (Nord9 — muted/inactive)
+ *
+ * ACCENT         = #88C0D0 (Nord8 — frost cyan, primary accent)
+ * ACCENT_HOVER   = #8FBCBB (Nord7 — teal hover)
+ * POSITIVE       = #A3BE8C (Nord14 — aurora green, income)
+ * NEGATIVE       = #BF616A (Nord11 — aurora red, expenses)
+ * WARNING        = #EBCB8B (Nord13 — aurora yellow)
+ * PURPLE         = #B48EAD (Nord15 — aurora purple)
+ * ORANGE         = #D08770 (Nord12 — aurora orange)
+ */
+
+:root {
+  /* ── Page / Global ─────────────────────────────────────────── */
+  --color-pageBackground: #2e3440;
+  --color-pageBackgroundModalActive: #3b4252;
+  --color-pageBackgroundTopLeft: #3b4252;
+  --color-pageBackgroundBottomRight: #2e3440;
+  --color-pageBackgroundLineTop: #88c0d0;
+  --color-pageBackgroundLineMid: #4c566a;
+  --color-pageBackgroundLineBottom: #434c5e;
+  --color-pageText: #eceff4;
+  --color-pageTextLight: #e5e9f0;
+  --color-pageTextSubdued: #81a1c1;
+  --color-pageTextDark: #eceff4;
+  --color-pageTextPositive: #a3be8c;
+  --color-pageTextLink: #88c0d0;
+  --color-pageTextLinkLight: #8fbcbb;
+  --color-overlayBackground: rgba(0, 0, 0, 0.45);
+
+  /* ── Cards ─────────────────────────────────────────────────── */
+  --color-cardBackground: #434c5e;
+  --color-cardBorder: #88c0d0;
+  --color-cardShadow: rgba(0, 0, 0, 0.4);
+
+  /* ── Tables ────────────────────────────────────────────────── */
+  --color-tableBackground: #3b4252;
+  --color-tableRowBackgroundHover: #434c5e;
+  --color-tableText: #eceff4;
+  --color-tableTextLight: #eceff4;
+  --color-tableTextSubdued: #81a1c1;
+  --color-tableTextSelected: #eceff4;
+  --color-tableTextHover: #d8dee9;
+  --color-tableTextInactive: #81a1c1;
+  --color-tableHeaderText: #d8dee9;
+  --color-tableHeaderBackground: #434c5e;
+  --color-tableBorder: #4c566a;
+  --color-tableBorderSelected: #88c0d0;
+  --color-tableBorderHover: #8fbcbb;
+  --color-tableBorderSeparator: #4c566a;
+  --color-tableRowBackgroundHighlight: #3d5066;
+  --color-tableRowBackgroundHighlightText: #eceff4;
+  --color-tableRowHeaderBackground: #434c5e;
+  --color-tableRowHeaderText: #e5e9f0;
+
+  /* ── Numbers / Budget Values ───────────────────────────────── */
+  --color-numberPositive: #a3be8c;
+  --color-numberNegative: #bf616a;
+  --color-numberNeutral: #81a1c1;
+  --color-budgetNumberPositive: #eceff4;
+  --color-budgetNumberNegative: #bf616a;
+  --color-budgetNumberNeutral: #eceff4;
+  --color-budgetNumberZero: #81a1c1;
+  --color-toBudgetPositive: #a3be8c;
+  --color-toBudgetZero: #a3be8c;
+  --color-toBudgetNegative: #bf616a;
+  --color-templateNumberFunded: #a3be8c;
+  --color-templateNumberUnderFunded: #ebcb8b;
+  --color-reportsNumberPositive: #a3be8c;
+  --color-reportsNumberNegative: #bf616a;
+
+  /* ── Sidebar ───────────────────────────────────────────────── */
+  --color-sidebarBackground: #292e39;
+  --color-sidebarItemBackgroundPending: #ebcb8b;
+  --color-sidebarItemBackgroundPositive: #a3be8c;
+  --color-sidebarItemBackgroundFailed: #bf616a;
+  --color-sidebarItemAccentSelected: #88c0d0;
+  --color-sidebarItemBackgroundHover: #3b4252;
+  --color-sidebarItemText: #d8dee9;
+  --color-sidebarItemTextSelected: #88c0d0;
+  --color-sidebarBudgetName: #8fbcbb;
+
+  /* ── Menus & Autocomplete ──────────────────────────────────── */
+  --color-menuBackground: #3b4252;
+  --color-menuItemBackground: #3b4252;
+  --color-menuItemBackgroundHover: #4c566a;
+  --color-menuItemText: #eceff4;
+  --color-menuItemTextHover: #eceff4;
+  --color-menuItemTextSelected: #88c0d0;
+  --color-menuItemTextHeader: #8fbcbb;
+  --color-menuBorder: #2e3440;
+  --color-menuBorderHover: #88c0d0;
+  --color-menuKeybindingText: #8fbcbb;
+  --color-menuAutoCompleteBackground: #2e3440;
+  --color-menuAutoCompleteBackgroundHover: #434c5e;
+  --color-menuAutoCompleteText: #d8dee9;
+  --color-menuAutoCompleteTextHeader: #88c0d0;
+  --color-menuAutoCompleteItemText: #eceff4;
+  --color-menuAutoCompleteTextHover: #eceff4;
+  --color-menuAutoCompleteItemTextHover: #eceff4;
+  --color-noticeTextMenuHover: #a3be8c;
+
+  /* ── Modals ────────────────────────────────────────────────── */
+  --color-modalBackground: #434c5e;
+  --color-modalBorder: #4c566a;
+
+  /* ── Mobile ────────────────────────────────────────────────── */
+  --color-mobileHeaderBackground: #3b4252;
+  --color-mobileHeaderText: #eceff4;
+  --color-mobileHeaderTextSubdued: #d8dee9;
+  --color-mobileHeaderTextHover: rgba(200, 200, 200, 0.15);
+  --color-mobilePageBackground: #3b4252;
+  --color-mobileNavBackground: #2e3440;
+  --color-mobileNavItem: #d8dee9;
+  --color-mobileNavItemSelected: #88c0d0;
+  --color-mobileAccountShadow: rgba(0, 0, 0, 0.35);
+  --color-mobileAccountText: #5e81ac;
+  --color-mobileTransactionSelected: #88c0d0;
+  --color-mobileViewTheme: #3b4252;
+  --color-mobileConfigServerViewTheme: #5e81ac;
+
+  /* ── Markdown / Notes ─────────────────────────────────────── */
+  --color-markdownNormal: #434c5e;
+  --color-markdownDark: #3b4252;
+  --color-markdownLight: #4c566a;
+
+  /* ── Buttons — Menu ───────────────────────────────────────── */
+  --color-buttonMenuText: #d8dee9;
+  --color-buttonMenuTextHover: #d8dee9;
+  --color-buttonMenuBackground: transparent;
+  --color-buttonMenuBackgroundHover: rgba(200, 200, 200, 0.15);
+  --color-buttonMenuBorder: #4c566a;
+  --color-buttonMenuSelectedText: #2e3440;
+  --color-buttonMenuSelectedTextHover: #2e3440;
+  --color-buttonMenuSelectedBackground: #88c0d0;
+  --color-buttonMenuSelectedBackgroundHover: #8fbcbb;
+  --color-buttonMenuSelectedBorder: #88c0d0;
+
+  /* ── Buttons — Primary ────────────────────────────────────── */
+  --color-buttonPrimaryText: #2e3440;
+  --color-buttonPrimaryTextHover: #2e3440;
+  --color-buttonPrimaryBackground: #88c0d0;
+  --color-buttonPrimaryBackgroundHover: #8fbcbb;
+  --color-buttonPrimaryBorder: #88c0d0;
+  --color-buttonPrimaryShadow: rgba(0, 0, 0, 0.5);
+  --color-buttonPrimaryDisabledText: #4c566a;
+  --color-buttonPrimaryDisabledBackground: #3b4252;
+  --color-buttonPrimaryDisabledBorder: #3b4252;
+
+  /* ── Buttons — Normal ─────────────────────────────────────── */
+  --color-buttonNormalText: #d8dee9;
+  --color-buttonNormalTextHover: #eceff4;
+  --color-buttonNormalBackground: #3b4252;
+  --color-buttonNormalBackgroundHover: #434c5e;
+  --color-buttonNormalBorder: #4c566a;
+  --color-buttonNormalShadow: rgba(0, 0, 0, 0.35);
+  --color-buttonNormalSelectedText: #2e3440;
+  --color-buttonNormalSelectedBackground: #88c0d0;
+  --color-buttonNormalDisabledText: #4c566a;
+  --color-buttonNormalDisabledBackground: #3b4252;
+  --color-buttonNormalDisabledBorder: #4c566a;
+
+  /* ── Buttons — Bare ───────────────────────────────────────── */
+  --color-buttonBareText: #d8dee9;
+  --color-buttonBareTextHover: #eceff4;
+  --color-buttonBareBackground: transparent;
+  --color-buttonBareBackgroundHover: rgba(200, 200, 200, 0.15);
+  --color-buttonBareBackgroundActive: rgba(200, 200, 200, 0.25);
+  --color-buttonBareDisabledText: #4c566a;
+  --color-buttonBareDisabledBackground: transparent;
+
+  /* ── Calendar ─────────────────────────────────────────────── */
+  --color-calendarText: #eceff4;
+  --color-calendarBackground: #2e3440;
+  --color-calendarItemText: #d8dee9;
+  --color-calendarItemBackground: #3b4252;
+  --color-calendarSelectedBackground: #88c0d0;
+  --color-calendarCellBackground: #2e3440;
+
+  /* ── Notices / Success ────────────────────────────────────── */
+  --color-noticeBackground: #3d5040;
+  --color-noticeBackgroundLight: #2e3d30;
+  --color-noticeBackgroundDark: #4a6650;
+  --color-noticeText: #a3be8c;
+  --color-noticeTextLight: #8bad74;
+  --color-noticeTextDark: #c2d9ab;
+  --color-noticeTextMenu: #a3be8c;
+  --color-noticeBorder: #3d5040;
+
+  /* ── Warnings ─────────────────────────────────────────────── */
+  --color-warningBackground: #4a3f2a;
+  --color-warningText: #ebcb8b;
+  --color-warningTextLight: #d4b472;
+  --color-warningTextDark: #f5dfa8;
+  --color-warningBorder: #6b5b35;
+
+  /* ── Errors ───────────────────────────────────────────────── */
+  --color-errorBackground: #4a2e30;
+  --color-errorText: #bf616a;
+  --color-errorTextDark: #d4848c;
+  --color-errorTextDarker: #d4848c;
+  --color-errorTextMenu: #bf616a;
+  --color-errorBorder: #6b3840;
+
+  /* ── Upcoming ─────────────────────────────────────────────── */
+  --color-upcomingBackground: #3d4a5c;
+  --color-upcomingText: #88c0d0;
+  --color-upcomingBorder: #4c566a;
+
+  /* ── Form Inputs ──────────────────────────────────────────── */
+  --color-formLabelText: #8fbcbb;
+  --color-formLabelBackground: #2e3440;
+  --color-formInputBackground: #3b4252;
+  --color-formInputBackgroundSelected: #434c5e;
+  --color-formInputBackgroundSelection: #5e81ac;
+  --color-formInputBorder: #4c566a;
+  --color-formInputBorderSelected: #88c0d0;
+  --color-formInputText: #eceff4;
+  --color-formInputTextSelected: #eceff4;
+  --color-formInputTextPlaceholder: #81a1c1;
+  --color-formInputTextPlaceholderSelected: #d8dee9;
+  --color-formInputTextSelection: #eceff4;
+  --color-formInputTextReadOnlySelection: #3b4252;
+  --color-formInputShadowSelected: #5e81ac;
+  --color-formInputTextHighlight: #88c0d0;
+
+  /* ── Checkboxes / Toggles ─────────────────────────────────── */
+  --color-checkboxText: #eceff4;
+  --color-checkboxBackgroundSelected: #88c0d0;
+  --color-checkboxBorderSelected: #88c0d0;
+  --color-checkboxShadowSelected: #5e81ac;
+  --color-checkboxToggleBackground: #4c566a;
+  --color-checkboxToggleBackgroundSelected: #88c0d0;
+  --color-checkboxToggleDisabled: #3b4252;
+
+  /* ── Pills / Tags ─────────────────────────────────────────── */
+  --color-pillBackground: #3b4252;
+  --color-pillBackgroundLight: #2e3440;
+  --color-pillText: #d8dee9;
+  --color-pillTextHighlighted: #88c0d0;
+  --color-pillBorder: #4c566a;
+  --color-pillBorderDark: #4c566a;
+  --color-pillBackgroundSelected: #5e81ac;
+  --color-pillTextSelected: #eceff4;
+  --color-pillBorderSelected: #88c0d0;
+  --color-pillTextSubdued: #81a1c1;
+
+  /* ── Reports ──────────────────────────────────────────────── */
+  --color-reportsRed: #bf616a;
+  --color-reportsBlue: #81a1c1;
+  --color-reportsGreen: #a3be8c;
+  --color-reportsGray: #4c566a;
+  --color-reportsLabel: #eceff4;
+  --color-reportsInnerLabel: #2e3440;
+  --color-reportsChartFill: #a3be8c;
+  --color-reportsNumberNeutral: #81a1c1;
+
+  /* ── Note Tags ────────────────────────────────────────────── */
+  --color-noteTagBackground: #3d4a5c;
+  --color-noteTagBackgroundHover: #4c566a;
+  --color-noteTagDefault: #3d4a5c;
+  --color-noteTagText: #88c0d0;
+
+  /* ── Budget Month Headers ─────────────────────────────────── */
+  --color-budgetOtherMonth: #2e3440;
+  --color-budgetCurrentMonth: #3b4252;
+  --color-budgetHeaderOtherMonth: #3b4252;
+  --color-budgetHeaderCurrentMonth: #434c5e;
+
+  /* ── Floating Action Bar ──────────────────────────────────── */
+  --color-floatingActionBarBackground: #5e81ac;
+  --color-floatingActionBarBorder: #5e81ac;
+  --color-floatingActionBarText: #eceff4;
+
+  /* ── Tooltips ─────────────────────────────────────────────── */
+  --color-tooltipText: #eceff4;
+  --color-tooltipBackground: #434c5e;
+  --color-tooltipBorder: #4c566a;
+
+  /* ── Chart Colors (9 qualitative — Aurora + Frost) ────────── */
+  --color-chartQual1: #88c0d0;
+  --color-chartQual2: #a3be8c;
+  --color-chartQual3: #bf616a;
+  --color-chartQual4: #ebcb8b;
+  --color-chartQual5: #b48ead;
+  --color-chartQual6: #8fbcbb;
+  --color-chartQual7: #d08770;
+  --color-chartQual8: #81a1c1;
+  --color-chartQual9: #5e81ac;
+}
+
+/* --- OMV AUTOMATED MAPPING --- */
+:root, .omv-dark-theme {
+  --theme-primary: var(--color-buttonPrimaryBackground, var(--color-sidebarBackground, #5dacdf));
+}
+
+body, .omv-dark-theme, .mat-app-background, .mat-typography {
+  background-color: var(--color-pageBackground) !important;
+  --mat-background-color-body: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer-container, .omv-dark-theme .mat-drawer-container {
+  background-color: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer, .omv-dark-theme .mat-drawer {
+  background-color: var(--color-sidebarBackground) !important;
+  color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+/* Navbar / Sidebar text colors */
+.mat-drawer .mat-list-item,
+.omv-dark-theme .mat-drawer .mat-list-item,
+.mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.omv-dark-theme .mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.mat-drawer a, .omv-dark-theme .mat-drawer a {
+    color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+.mat-card, .omv-dark-theme .mat-card {
+  background-color: var(--color-cardBackground, var(--color-pageBackground)) !important;
+  color: var(--color-pageText) !important;
+}
+
+/* Datatable Text */
+.ngx-datatable, .omv-dark-theme .ngx-datatable,
+.ngx-datatable .datatable-body-cell, .omv-dark-theme .ngx-datatable .datatable-body-cell,
+.ngx-datatable .datatable-header-cell, .omv-dark-theme .ngx-datatable .datatable-header-cell {
+  color: var(--color-tableText, var(--color-pageText)) !important;
+}

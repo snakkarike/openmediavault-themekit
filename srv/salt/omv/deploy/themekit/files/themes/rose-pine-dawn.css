@@ -1,0 +1,274 @@
+:root {
+  --logo-filter: invert(1);
+  --color-pageBackground: #faf4ed;
+  --color-pageBackgroundModalActive: #fffaf3;
+  --color-pageBackgroundTopLeft: #f4ede8;
+  --color-pageBackgroundBottomRight: #fffaf3;
+  --color-pageBackgroundLineTop: #907aa9;
+  --color-pageBackgroundLineMid: #f4ede8;
+  --color-pageBackgroundLineBottom: #f2e9e1;
+  --color-pageText: #575279;
+  --color-pageTextLight: #575279;
+  --color-pageTextSubdued: #9893a5;
+  --color-pageTextDark: #575279;
+  --color-pageTextPositive: #907aa9;
+  --color-pageTextLink: #56949f;
+  --color-pageTextLinkLight: #907aa9;
+
+  --color-cardBackground: #fffaf3;
+  --color-cardBorder: #907aa9;
+  --color-cardShadow: #f4ede8;
+
+  --color-tableBackground: #faf4ed;
+  --color-tableRowBackgroundHover: #f2e9e1;
+  --color-tableText: #575279;
+  --color-tableTextLight: #575279;
+  --color-tableTextSubdued: #9893a5;
+  --color-tableTextSelected: #575279;
+  --color-tableTextHover: #575279;
+  --color-tableTextInactive: #9893a5;
+  --color-tableHeaderText: #797593;
+  --color-tableHeaderBackground: #fffaf3;
+  --color-tableBorder: #f2e9e1;
+  --color-tableBorderSelected: #907aa9;
+  --color-tableBorderHover: #907aa9;
+  --color-tableBorderSeparator: #dfdad9;
+  --color-tableRowBackgroundHighlight: #f2e9e1;
+  --color-tableRowBackgroundHighlightText: #575279;
+  --color-tableRowHeaderBackground: #fffaf3;
+  --color-tableRowHeaderText: #575279;
+  
+  --color-sidebarBackground: #f4ede8;
+  --color-sidebarItemBackgroundPending: #ea9d34;
+  --color-sidebarItemBackgroundPositive: #56949f;
+  --color-sidebarItemBackgroundFailed: #b4637a;
+  --color-sidebarItemAccentSelected: #907aa9;
+  --color-sidebarItemBackgroundHover: #f2e9e1;
+  --color-sidebarItemText: #575279;
+  --color-sidebarItemTextSelected: #907aa9;
+  --color-sidebarBudgetName: #797593;
+  --color-sidebarBorder: #f2e9e1;
+
+  --color-menuBackground: #fffaf3;
+  --color-menuItemBackground: #fffaf3;
+  --color-menuItemBackgroundHover: #f2e9e1;
+  --color-menuItemText: #575279;
+  --color-menuItemTextHover: #575279;
+  --color-menuItemTextSelected: #907aa9;
+  --color-menuItemTextHeader: #56949f;
+  --color-menuBorder: #f2e9e1;
+  --color-menuBorderHover: #907aa9;
+  --color-menuKeybindingText: #797593;
+  --color-menuAutoCompleteBackground: #faf4ed;
+  --color-menuAutoCompleteBackgroundHover: #f2e9e1;
+  --color-menuAutoCompleteText: #575279;
+  --color-menuAutoCompleteTextHeader: #56949f;
+  --color-menuAutoCompleteItemText: #575279;
+
+  --color-modalBackground: #fffaf3;
+  --color-modalBorder: #f2e9e1;
+
+  --color-mobileHeaderBackground: #f4ede8;
+  --color-mobileHeaderText: #575279;
+  --color-mobileHeaderTextSubdued: #797593;
+  --color-mobileHeaderTextHover: rgba(87, 82, 121, 0.15);
+  --color-mobilePageBackground: #faf4ed;
+  --color-mobileNavBackground: #fffaf3;
+  --color-mobileNavItem: #575279;
+  --color-mobileNavItemSelected: #907aa9;
+  --color-mobileAccountShadow: #f4ede8;
+  --color-mobileAccountText: #56949f;
+  --color-mobileTransactionSelected: #907aa9;
+  --color-mobileViewTheme: #f4ede8;
+  --color-mobileConfigServerViewTheme: #907aa9;
+
+  --color-markdownNormal: #dfdad9;
+  --color-markdownDark: #f2e9e1;
+  --color-markdownLight: #cecacd;
+
+  --color-buttonMenuText: #575279;
+  --color-buttonMenuTextHover: #575279;
+  --color-buttonMenuBackground: transparent;
+  --color-buttonMenuBackgroundHover: rgba(87, 82, 121, 0.1);
+  --color-buttonMenuBorder: #dfdad9;
+  --color-buttonMenuSelectedText: #faf4ed;
+  --color-buttonMenuSelectedTextHover: #faf4ed;
+  --color-buttonMenuSelectedBackground: #ea9d34;
+  --color-buttonMenuSelectedBackgroundHover: #d7827e;
+  --color-buttonMenuSelectedBorder: #ea9d34;
+
+  --color-buttonPrimaryText: #faf4ed;
+  --color-buttonPrimaryTextHover: #faf4ed;
+  --color-buttonPrimaryBackground: #907aa9;
+  --color-buttonPrimaryBackgroundHover: #56949f;
+  --color-buttonPrimaryBorder: #907aa9;
+  --color-buttonPrimaryShadow: rgba(0, 0, 0, 0.4);
+  --color-buttonPrimaryDisabledText: #9893a5;
+  --color-buttonPrimaryDisabledBackground: #f2e9e1;
+  --color-buttonPrimaryDisabledBorder: #f2e9e1;
+
+  --color-buttonNormalText: #575279;
+  --color-buttonNormalTextHover: #575279;
+  --color-buttonNormalBackground: #f2e9e1;
+  --color-buttonNormalBackgroundHover: #dfdad9;
+  --color-buttonNormalBorder: #dfdad9;
+  --color-buttonNormalShadow: rgba(0, 0, 0, 0.3);
+  --color-buttonNormalSelectedText: #faf4ed;
+  --color-buttonNormalSelectedBackground: #907aa9;
+  --color-buttonNormalDisabledText: #9893a5;
+  --color-buttonNormalDisabledBackground: #faf4ed;
+  --color-buttonNormalDisabledBorder: #f2e9e1;
+
+  --color-buttonBareText: #575279;
+  --color-buttonBareTextHover: #575279;
+  --color-buttonBareBackground: transparent;
+  --color-buttonBareBackgroundHover: rgba(87, 82, 121, 0.1);
+  --color-buttonBareBackgroundActive: rgba(87, 82, 121, 0.2);
+  --color-buttonBareDisabledText: #9893a5;
+  --color-buttonBareDisabledBackground: transparent;
+
+  --color-calendarText: #575279;
+  --color-calendarBackground: #fffaf3;
+  --color-calendarItemText: #575279;
+  --color-calendarItemBackground: #f2e9e1;
+  --color-calendarSelectedBackground: #907aa9;
+  --color-calendarCellBackground: #faf4ed;
+
+  --color-noticeBackground: rgba(86, 148, 159, 0.15);
+  --color-noticeBackgroundLight: rgba(86, 148, 159, 0.1);
+  --color-noticeBackgroundDark: rgba(86, 148, 159, 0.2);
+  --color-noticeText: #56949f;
+  --color-noticeTextLight: #56949f;
+  --color-noticeTextDark: #56949f;
+  --color-noticeTextMenu: #56949f;
+  --color-noticeBorder: #56949f;
+
+  --color-warningBackground: rgba(234, 157, 52, 0.15);
+  --color-warningText: #ea9d34;
+  --color-warningTextLight: #ea9d34;
+  --color-warningTextDark: #ea9d34;
+  --color-warningBorder: #ea9d34;
+
+  --color-errorBackground: rgba(180, 99, 122, 0.15);
+  --color-errorText: #b4637a;
+  --color-errorTextDark: #b4637a;
+  --color-errorTextDarker: #b4637a;
+  --color-errorTextMenu: #b4637a;
+  --color-errorBorder: #b4637a;
+
+  --color-upcomingBackground: rgba(144, 122, 169, 0.15);
+  --color-upcomingText: #907aa9;
+  --color-upcomingBorder: #f2e9e1;
+
+  --color-formLabelText: #797593;
+  --color-formLabelBackground: #fffaf3;
+  --color-formInputBackground: #faf4ed;
+  --color-formInputBackgroundSelected: #f2e9e1;
+  --color-formInputBackgroundSelection: #907aa9;
+  --color-formInputBorder: #dfdad9;
+  --color-formInputTextReadOnlySelection: #f2e9e1;
+  --color-formInputBorderSelected: #907aa9;
+  --color-formInputText: #575279;
+  --color-formInputTextSelected: #faf4ed;
+  --color-formInputTextPlaceholder: #9893a5;
+  --color-formInputTextPlaceholderSelected: #797593;
+  --color-formInputTextSelection: #f2e9e1;
+  --color-formInputShadowSelected: #907aa9;
+  --color-formInputTextHighlight: #56949f;
+
+  --color-checkboxText: #575279;
+  --color-checkboxBackgroundSelected: #907aa9;
+  --color-checkboxBorderSelected: #907aa9;
+  --color-checkboxShadowSelected: #56949f;
+  --color-checkboxToggleBackground: #dfdad9;
+  --color-checkboxToggleBackgroundSelected: #907aa9;
+  --color-checkboxToggleDisabled: #f2e9e1;
+  
+  --color-pillBackground: #f2e9e1;
+  --color-pillBackgroundLight: #faf4ed;
+  --color-pillText: #575279;
+  --color-pillTextHighlighted: #907aa9;
+  --color-pillBorder: #dfdad9;
+  --color-pillBorderDark: #dfdad9;
+  --color-pillBackgroundSelected: #907aa9;
+  --color-pillTextSelected: #faf4ed;
+  --color-pillBorderSelected: #907aa9;
+  --color-pillTextSubdued: #9893a5;
+
+  --color-reportsRed: #b4637a;
+  --color-reportsBlue: #56949f;
+  --color-reportsGreen: #286983;
+  --color-reportsGray: #9893a5;
+  --color-reportsLabel: #575279;
+  --color-reportsInnerLabel: #faf4ed;
+
+  --color-noteTagBackground: rgba(144, 122, 169, 0.2);
+  --color-noteTagBackgroundHover: rgba(144, 122, 169, 0.3);
+  --color-noteTagDefault: #907aa9;
+  --color-noteTagText: #907aa9;
+
+  --color-budgetOtherMonth: #fffaf3;
+  --color-budgetCurrentMonth: #faf4ed;
+  --color-budgetHeaderOtherMonth: #f4ede8;
+  --color-budgetHeaderCurrentMonth: #fffaf3;
+
+  --color-floatingActionBarBackground: #fffaf3;
+  --color-floatingActionBarBorder: #907aa9;
+  --color-floatingActionBarText: #575279;
+
+  --color-tooltipText: #575279;
+  --color-tooltipBackground: #f2e9e1;
+  --color-tooltipBorder: #dfdad9;
+
+  --color-templateNumberFunded: #56949f;
+  --color-templateNumberUnderFunded: #ea9d34;
+
+  --color-toBudgetZero: #56949f;
+  --color-toBudgetPositive: #56949f;
+  --color-toBudgetNegative: #b4637a;
+
+  --color-overlayBackground: rgba(244, 237, 232, 0.7);
+}
+
+/* --- OMV AUTOMATED MAPPING --- */
+:root, .omv-dark-theme {
+  --theme-primary: var(--color-buttonPrimaryBackground, var(--color-sidebarBackground, #5dacdf));
+}
+
+body, .omv-dark-theme, .mat-app-background, .mat-typography {
+  background-color: var(--color-pageBackground) !important;
+  --mat-background-color-body: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer-container, .omv-dark-theme .mat-drawer-container {
+  background-color: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer, .omv-dark-theme .mat-drawer {
+  background-color: var(--color-sidebarBackground) !important;
+  color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+/* Navbar / Sidebar text colors */
+.mat-drawer .mat-list-item,
+.omv-dark-theme .mat-drawer .mat-list-item,
+.mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.omv-dark-theme .mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.mat-drawer a, .omv-dark-theme .mat-drawer a {
+    color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+.mat-card, .omv-dark-theme .mat-card {
+  background-color: var(--color-cardBackground, var(--color-pageBackground)) !important;
+  color: var(--color-pageText) !important;
+}
+
+/* Datatable Text */
+.ngx-datatable, .omv-dark-theme .ngx-datatable,
+.ngx-datatable .datatable-body-cell, .omv-dark-theme .ngx-datatable .datatable-body-cell,
+.ngx-datatable .datatable-header-cell, .omv-dark-theme .ngx-datatable .datatable-header-cell {
+  color: var(--color-tableText, var(--color-pageText)) !important;
+}
+

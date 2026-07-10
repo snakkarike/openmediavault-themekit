@@ -1,0 +1,323 @@
+/* High contrast light theme */
+
+/* Defining colors: #000, hsl(37, 100%, 21%), hsl(228, 100%, 33%), #fff, hsl(0, 0%,  90%), hsl(90, 100%, 17%) */
+
+:root {
+  --logo-filter: invert(1);
+
+--color-pageBackground: hsl(0, 0%,  90%);
+--color-pageText: hsl(0, 0%,  0%);
+--color-pageTextSubdued: hsl(37, 100%, 21%);
+
+--color-pageBackgroundModalActive: hsl(0, 0%,  80%);
+--color-pageBackgroundTopLeft: hsl(0, 0%,  94%);
+--color-pageBackgroundBottomRight: hsl(0, 0%,  86%);
+--color-pageBackgroundLineTop: #fff;
+--color-pageBackgroundLineMid: hsl(0, 0%,  94%);
+--color-pageBackgroundLineBottom: hsl(0, 0%,  86%);
+--color-pageTextLight: hsl(37, 100%, 21%);
+--color-pageTextDark: hsl(0, 0%,  0%);
+--color-pageTextPositive: hsl(90, 100%, 17%);
+--color-pageTextLink: hsl(228, 100%, 33%);
+--color-pageTextLinkLight: hsl(228, 100%, 33%);
+
+--color-cardBackground: #fff;
+--color-cardBorder: hsl(0, 0%,  37%);
+--color-cardShadow: hsl(0, 0%,  31%);
+
+--color-tableBackground: hsl(0, 0%,  94%);
+--color-tableBorder: hsl(220, 100%, 99%);
+--color-tableText: hsl(0, 0%,  0%);
+--color-tableTextSubdued: hsl(37, 100%, 21%);
+--color-tableBorderHover: #99ffff; /* hsl(0, 0%,  60%) */
+--color-tableRowBackgroundHover: hsl(0, 0%,  99%);
+
+--color-tableTextLight: hsl(37, 100%, 21%);
+--color-tableTextSelected: hsl(0, 0%, 31%);
+--color-tableTextHover: hsl(0, 0%, 0%);
+--color-tableTextInactive: hsl(37, 100%, 21%);
+--color-tableHeaderText: hsl(228, 100%, 33%);
+--color-tableHeaderBackground: #fff;
+--color-tableBorderSelected: hsl(0, 0%, 41%);
+--color-tableBorderSeparator: hsl(0, 0%, 60%);
+--color-tableRowBackgroundHighlight: hsl(0, 0%, 85%);
+--color-tableRowBackgroundHighlightText: hsl(0, 0%, 0%);
+--color-tableRowHeaderBackground: hsl(0, 0%, 98%);
+--color-tableRowHeaderText: hsl(0, 0%, 23%);
+
+--color-sidebarBackground: hsl(0, 0%, 92%);
+--color-sidebarItemAccentSelected: hsl(228, 100%, 33%);
+--color-sidebarItemBackgroundHover: hsl(220, 100%, 99%);
+--color-sidebarItemText: #000;
+--color-sidebarItemTextSelected:  hsl(228, 100%, 33%);
+
+--color-sidebarItemBackgroundPending: hsl(37, 100%, 21%);
+--color-sidebarItemBackgroundPositive: hsl(90, 100%, 17%);
+--color-sidebarItemBackgroundFailed: hsl(0, 100%, 30%);
+
+--color-sidebarBudgetName: #0000ff;
+--color-tableTextItemAdded: #0000ff;
+--color-sidebarItemTextUpdated: #0000ff;  
+
+--color-menuAutoCompleteTextHeader: hsl(37, 100%, 21%);
+
+--color-menuBackground: #fff;
+--color-menuItemBackground: hsl(0, 0%, 98%);
+--color-menuItemBackgroundHover: hsl(0, 0%, 94%);
+--color-menuItemText: hsl(0, 0%, 0%);
+--color-menuItemTextHover: hsl(0, 0%, 0%);
+--color-menuItemTextSelected: hsl(0, 0%, 70%);
+--color-menuItemTextHeader: hsl(37, 100%, 21%);
+--color-menuBorder: hsl(0, 0%, 0%);
+--color-menuBorderHover: hsl(0, 0%, 96%);
+--color-menuKeybindingText: hsl(0, 0%, 30%);
+--color-menuAutoCompleteBackground: hsl(0, 0%, 100%);
+--color-menuAutoCompleteBackgroundHover: rgba(100, 100, 100, .12);
+--color-menuAutoCompleteText: #000;
+--color-menuAutoCompleteTextHover: #000;
+--color-menuAutoCompleteItemTextHover: #000; /* menuAutoCompleteText */
+--color-menuAutoCompleteItemText: #000; /* menuAutoCompleteText */
+
+--color-modalBackground: hsl(0, 0%, 95%);
+--color-modalBorder: hsl(0, 0%, 50%);
+
+--color-mobileHeaderBackground: hsl(0, 0%, 80%);
+--color-mobileHeaderText: #000;
+--color-mobileHeaderTextSubdued: hsl(0, 0%, 20%);
+--color-mobileHeaderTextHover: #000;
+--color-mobilePageBackground: hsl(0, 0%, 98%);
+--color-mobileNavBackground: #fff;
+--color-mobileNavItem: hsl(0, 0%, 50%);
+--color-mobileNavItemSelected: hsl(0, 0%, 20%);
+--color-mobileAccountShadow: hsl(0, 0%, 70%);
+--color-mobileAccountText: hsl(0, 0%, 35%);
+--color-mobileTransactionSelected: hsl(0, 0%, 50%);
+
+--color-mobileViewTheme: hsl(0, 0%, 60%);
+--color-mobileConfigServerViewTheme: hsl(0, 0%, 50%);
+
+--color-markdownNormal: hsl(0, 0%, 90%);
+--color-markdownDark: hsl(0, 0%, 60%);
+--color-markdownLight: hsl(0, 0%, 96%);
+
+--color-buttonMenuText: hsl(0, 0%, 25%);
+--color-buttonMenuTextHover: hsl(0, 0%, 0%);
+--color-buttonMenuBackground: transparent;
+--color-buttonMenuBackgroundHover: rgba(100, 100, 100, .15);
+--color-buttonMenuBorder: hsl(0, 0%, 48%);
+--color-buttonMenuSelectedText: hsl(0, 0%, 23%);
+--color-buttonMenuSelectedTextHover: hsl(0, 0%, 29%);
+--color-buttonMenuSelectedBackground: hsl(0, 0%, 76%);
+--color-buttonMenuSelectedBackgroundHover: hsl(0, 0%, 66%);
+--color-buttonMenuSelectedBorder: hsl(0, 0%, 76%);
+
+--color-buttonPrimaryDisabledText: hsl(0, 0%, 30%);
+--color-buttonPrimaryText:hsl(228, 100%, 25%);
+--color-buttonPrimaryTextHover: hsl(228, 100%, 10%);
+--color-buttonPrimaryBackground: hsl(228, 100%, 90%);
+--color-buttonPrimaryBackgroundHover: hsl(228, 100%, 85%);
+--color-buttonPrimaryBorder: hsl(0, 0%, 0%);
+--color-buttonPrimaryDisabledBackground: hsl(0, 0%, 70%);
+--color-buttonPrimaryDisabledBorder: hsl(0, 0%, 70%);
+
+--color-buttonPrimaryShadow: rgba(0, 0, 0, 0.6);
+
+--color-buttonNormalText: hsl(0, 0%, 20%);
+--color-buttonNormalTextHover: hsl(0, 0%, 20%);
+--color-buttonNormalBackground: hsl(0, 0%, 99%);
+--color-buttonNormalBackgroundHover: #fff;
+--color-buttonNormalBorder: hsl(0, 0%, 70%);
+--color-buttonNormalShadow: rgba(0, 0, 0, 0.5);
+--color-buttonNormalSelectedText: #fff;
+--color-buttonNormalSelectedBackground: hsl(0, 0%, 47%);
+--color-buttonNormalDisabledText: hsl(0, 0%, 43%);
+--color-buttonNormalDisabledBackground: hsl(0, 0%, 90%);
+--color-buttonNormalDisabledBorder: hsl(0, 0%, 90%);
+
+--color-calendarText: hsl(0, 0%, 0%);
+--color-calendarBackground: hsl(0, 0%, 75%);
+--color-calendarItemText: hsl(0, 0%, 0%);
+--color-calendarItemBackground: hsl(0, 0%, 98%);
+--color-calendarSelectedBackground: hsl(0, 0%, 85%);
+
+--color-buttonBareText: hsl(0, 0%, 0%);
+--color-buttonBareTextHover: hsl(0, 0%, 0%);
+--color-buttonBareBackground: transparent;
+--color-buttonBareBackgroundHover: hsl(220, 100%, 99%);
+--color-buttonBareBackgroundActive: rgba(100, 100, 100, .12);
+--color-buttonBareDisabledText: hsl(0, 0%, 43%);
+--color-buttonBareDisabledBackground: transparent;
+
+--color-warningText: hsl(37, 100%, 21%);
+--color-warningTextDark: hsl(37, 100%, 21%);
+--color-warningBackground: #f2ffcc;
+--color-errorText: hsl(0, 100%, 30%); 
+--color-errorTextDarker: hsl(0, 100%, 30%);
+--color-errorBackground: #f6e1d5;
+--color-noticeText: hsl(90, 100%, 17%);
+--color-noticeBackgroundLight: hsl(120, 100%, 99%);
+--color-noticeTextDark: hsl(90, 100%, 17%);
+--color-noticeBackground: #f2ffcc;
+
+--color-noticeBackgroundDark: #f2ffcc;
+--color-noticeTextLight: hsl(90, 100%, 17%);
+--color-noticeTextMenu: hsl(90, 100%, 17%);
+--color-noticeBorder: #0c6b58;
+--color-warningTextLight: hsl(37, 100%, 21%);
+--color-warningBorder: hsl(37, 100%, 21%);
+--color-errorTextDark: hsl(0, 100%, 30%);
+--color-errorTextMenu: hsl(0, 100%, 30%);
+--color-errorBorder: hsl(0, 100%, 30%);
+
+--color-formInputTextHighlight:hsl(301, 100%, 29%);
+
+--color-formLabelText: hsl(0, 0%, 47%);
+--color-formLabelBackground: hsl(0, 0%, 77%);
+--color-formInputBackground: hsl(0, 0%, 98%);
+--color-formInputBackgroundSelected: #fff;
+--color-formInputBackgroundSelection: hsl(0, 0%, 80%);
+--color-formInputBorder: hsl(0, 0%, 50%);
+--color-formInputTextReadOnlySelection: hsl(0, 0%, 98%);
+--color-formInputBorderSelected: hsl(228, 100%, 33%);
+--color-formInputText: hsl(0, 0%, 0%);
+--color-formInputTextSelected: hsl(0, 0%, 0%);
+--color-formInputTextPlaceholder: hsl(0, 0%, 20%);
+--color-formInputTextPlaceholderSelected: hsl(0, 0%, 20%);
+--color-formInputTextSelection: hsl(0, 0%, 94%);
+--color-formInputShadowSelected: hsl(0, 0%, 41%);
+
+--color-checkboxText: hsl(0, 0%, 95%);
+--color-checkboxBackgroundSelected: hsl(0, 0%, 30%);
+--color-checkboxBorderSelected: hsl(0, 0%, 30%);
+--color-checkboxShadowSelected: hsl(0, 0%, 41%);
+--color-checkboxToggleBackground: hsl(0, 0%, 50%);
+--color-checkboxToggleBackgroundSelected: hsl(0, 0%, 41%);
+--color-checkboxToggleDisabled: hsl(0, 0%, 77%);
+
+--color-pillBackground: hsl(0, 0%, 80%);
+--color-pillBackgroundLight: hsl(0, 0%, 98%);
+--color-pillText: #000;
+--color-pillTextHighlighted: hsl(0, 0%, 41%);
+--color-pillBorder: hsl(0, 0%, 70%);
+--color-pillBorderDark: hsl(0, 0%, 70%);
+--color-pillBackgroundSelected: #99ffff; /* hsl(0, 0%, 85%); */
+--color-pillTextSelected: hsl(0, 0%, 27%);
+--color-pillBorderSelected: hsl(0, 0%, 41%);
+--color-pillTextSubdued: hsl(0, 0%, 81%);
+
+
+--color-reportsRed: hsl(0, 100%, 30%);
+--color-reportsBlue: #40a5f7;
+--color-reportsGreen: #3ebd93;
+--color-reportsGray: #747c8b;
+--color-reportsLabel: #102a43;
+--color-reportsInnerLabel: #243b53;
+
+  
+--color-noteTagBackground: #e4d4ff;
+--color-noteTagBackgroundHover: #dac4ff;
+--color-noteTagDefault: #e4d4ff;
+--color-noteTagText: #000;
+
+--color-upcomingText: hsl(228, 100%, 33%);
+--color-upcomingBorder: hsl(0, 0%, 35%);
+--color-upcomingBackground: hsl(301, 100%, 95%);
+
+--color-budgetOtherMonth: hsl(0, 0%, 92%);
+--color-budgetCurrentMonth: hsl(0, 0%, 94%);
+--color-budgetHeaderOtherMonth: hsl(0, 0%, 95%);
+--color-budgetHeaderCurrentMonth: hsl(0, 0%, 98%);
+--color-budgetNumberZero: hsl(0, 0%,  30%);  
+
+--color-budgetNumberNegative: hsl(0, 100%, 30%);
+--color-budgetNumberNeutral: hsl(0, 0%, 0%);
+--color-budgetNumberPositive: hsl(90, 100%, 17%);
+--color-templateNumberFunded: hsl(90, 100%, 17%);
+--color-templateNumberUnderFunded: hsl(37, 100%, 21%);
+--color-toBudgetPositive: hsl(90, 100%, 17%);
+--color-toBudgetZero: hsl(0, 0%, 43%);
+--color-toBudgetNegative: hsl(0, 100%, 30%);
+
+--color-reportsNumberPositive: hsl(90, 100%, 17%); 
+--color-reportsNumberNegative: hsl(0, 100%, 30%);
+--color-reportsNumberNeutral: hsl(0, 0%, 0%);
+
+--color-reportsRed: hsl(0, 100%, 30%);
+--color-reportsBlue: #40a5f7;
+--color-reportsGreen: #3ebd93;
+--color-reportsGray: #747c8b;
+--color-reportsLabel: #102a43;
+--color-reportsInnerLabel: #243b53;
+
+--color-reportsChartFill: #af9955;
+
+--color-chartQual1: #879a39;  /* green-400 - olive green (primary) */
+--color-chartQual2: #d0a215;  /* yellow-400 - gold */
+--color-chartQual3: #da702c;  /* orange-400 - warm orange */
+--color-chartQual4: #66800b;  /* green-600 - dark green */
+--color-chartQual5: #205ea6;  /* blue-600 - blue accent */
+--color-chartQual6: #c03e35;  /* red-500 - red */
+--color-chartQual7: #a0af54;  /* green-300 - light olive */
+--color-chartQual8: #ad8301;  /* yellow-600 - dark gold */
+--color-chartQual9: #bc5215;  /* orange-600 - deep orange */
+ 
+--color-numberPositive: hsl(90, 100%, 17%);
+--color-numberNegative: hsl(0, 100%, 30%);
+--color-numberNeutral: hsl(0, 0%,  30%);
+
+--color-floatingActionBarBackground: hsl(0, 0%, 60%);
+--color-floatingActionBarBorder: hsl(0, 0%, 60%);
+--color-floatingActionBarText: hsl(0, 0%, 98%);
+
+--color-tooltipText: hsl(0, 0%, 20%);
+--color-tooltipBackground: #fff;
+--color-tooltipBorder: hsl(0, 0%, 90%);
+
+--color-calendarCellBackground: hsl(0, 0%, 94%);
+
+--color-overlayBackground: rgba(0, 0, 0, 0.3);
+
+}
+
+/* --- OMV AUTOMATED MAPPING --- */
+:root, .omv-dark-theme {
+  --theme-primary: var(--color-buttonPrimaryBackground, var(--color-sidebarBackground, #5dacdf));
+}
+
+body, .omv-dark-theme, .mat-app-background, .mat-typography {
+  background-color: var(--color-pageBackground) !important;
+  --mat-background-color-body: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer-container, .omv-dark-theme .mat-drawer-container {
+  background-color: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer, .omv-dark-theme .mat-drawer {
+  background-color: var(--color-sidebarBackground) !important;
+  color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+/* Navbar / Sidebar text colors */
+.mat-drawer .mat-list-item,
+.omv-dark-theme .mat-drawer .mat-list-item,
+.mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.omv-dark-theme .mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.mat-drawer a, .omv-dark-theme .mat-drawer a {
+    color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+.mat-card, .omv-dark-theme .mat-card {
+  background-color: var(--color-cardBackground, var(--color-pageBackground)) !important;
+  color: var(--color-pageText) !important;
+}
+
+/* Datatable Text */
+.ngx-datatable, .omv-dark-theme .ngx-datatable,
+.ngx-datatable .datatable-body-cell, .omv-dark-theme .ngx-datatable .datatable-body-cell,
+.ngx-datatable .datatable-header-cell, .omv-dark-theme .ngx-datatable .datatable-header-cell {
+  color: var(--color-tableText, var(--color-pageText)) !important;
+}
+

@@ -1,0 +1,140 @@
+version: "1.0"
+type: component
+data:
+  name: themekit-settings-page
+  type: formPage
+  config:
+    request:
+      service: ThemeKit
+      get:
+        method: get
+      post:
+        method: set
+    fields:
+      - type: select
+        name: theme
+        label: _("Theme")
+        value: default
+        store:
+          data:
+            - value: "default"
+              text: _("Default")
+            - value: "alucard"
+              text: _("Alucard")
+            - value: "black-gold-theme"
+              text: _("Black Gold")
+            - value: "butterfly-theme"
+              text: _("Butterfly")
+            - value: "catppuccin-frappe"
+              text: _("Catppuccin Frappe")
+            - value: "catppuccin-latte"
+              text: _("Catppuccin Latte")
+            - value: "catppuccin-macchiato"
+              text: _("Catppuccin Macchiato")
+            - value: "catppuccin-mocha"
+              text: _("Catppuccin Mocha")
+            - value: "okabe-ito"
+              text: _("Okabe Ito")
+            - value: "dracula"
+              text: _("Dracula")
+            - value: "gruvbox-dark"
+              text: _("Gruvbox Dark")
+            - value: "gruvbox-light"
+              text: _("Gruvbox Light")
+            - value: "high-contrast-light"
+              text: _("High Contrast Light")
+            - value: "Ilavenil"
+              text: _("Ilavenil")
+            - value: "matrix-theme"
+              text: _("Matrix")
+            - value: "miami-beach"
+              text: _("Miami Beach")
+            - value: "nord-theme"
+              text: _("Nord")
+            - value: "Notion-Dark-Mode"
+              text: _("Notion Dark Mode")
+            - value: "rose-pine"
+              text: _("Rose Pine")
+            - value: "rose-pine-dawn"
+              text: _("Rose Pine Dawn")
+            - value: "rose-pine-moon"
+              text: _("Rose Pine Moon")
+            - value: "shades-of-coffee"
+              text: _("Shades of Coffee")
+            - value: "shades-of-gray"
+              text: _("Shades of Gray")
+            - value: "simple-dark"
+              text: _("Simple Dark")
+            - value: "1970-theme"
+              text: _("1970")
+            - value: "thyrium"
+              text: _("Thyrium")
+            - value: "YNA-Theme-Dark"
+              text: _("YNA Dark")
+            - value: "YNA-Theme-Light"
+              text: _("YNA Light")
+            - value: "you-need-a-dark-mode"
+              text: _("You Need A Dark Mode")
+            - value: "theme-zero-dark"
+              text: _("Zero Dark")
+      - type: select
+        name: accent
+        label: _("Accent color")
+        value: default
+        modifiers:
+          - type: hidden
+            constraint:
+              operator: ne
+              arg0:
+                prop: theme
+              arg1: default
+        store:
+          data:
+            - value: "default"
+              text: _("Default (brand navy)")
+            - value: "slate"
+              text: _("Slate")
+            - value: "gray"
+              text: _("Gray")
+            - value: "zinc"
+              text: _("Zinc")
+            - value: "neutral"
+              text: _("Neutral")
+            - value: "stone"
+              text: _("Stone")
+            - value: "red"
+              text: _("Red")
+            - value: "orange"
+              text: _("Orange")
+            - value: "amber"
+              text: _("Amber")
+            - value: "yellow"
+              text: _("Yellow")
+            - value: "lime"
+              text: _("Lime")
+            - value: "green"
+              text: _("Green")
+            - value: "emerald"
+              text: _("Emerald")
+            - value: "teal"
+              text: _("Teal")
+            - value: "cyan"
+              text: _("Cyan")
+            - value: "sky"
+              text: _("Sky")
+            - value: "blue"
+              text: _("Blue")
+            - value: "indigo"
+              text: _("Indigo")
+            - value: "violet"
+              text: _("Violet")
+            - value: "purple"
+              text: _("Purple")
+            - value: "fuchsia"
+              text: _("Fuchsia")
+            - value: "pink"
+              text: _("Pink")
+            - value: "rose"
+              text: _("Rose")
+    buttons:
+      - template: submit

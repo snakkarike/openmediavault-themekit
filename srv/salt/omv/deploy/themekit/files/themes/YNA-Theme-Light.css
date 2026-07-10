@@ -1,0 +1,301 @@
+/* Light theme based on nYNAB 2026 color scheme */
+/* Theme is in HSL (Hue, Saturation, Lightness) format to make it easy for you to change the hue, saturation or lightness of any color to your satisfaction without knowing hex codes. */
+/* Higher percentage is more saturated and lighter. */
+
+:root {
+/*Admonitions */
+--color-warningBackground: hsl(54, 95%, 76%);
+--color-warningTextLight: hsl(47, 79%, 51%);
+--color-warningBorder: hsl(47, 79%, 51%);
+--color-warningText: hsl(40, 80%, 40%);
+--color-warningTextDark: hsl(24, 87%, 24%);
+--color-errorBackground: hsl(0, 100%, 95%);
+--color-errorTextMenu: hsl(0, 98%, 80%);
+--color-errorText: hsl(356, 75%, 53%);
+--color-errorBorder: hsl(356, 75%, 53%);
+--color-errorTextDark: hsl(352, 91%, 35%);
+--color-errorTextDarker: hsl(348, 92%, 20%);
+--color-noticeBackgroundLight: hsl(88, 75%, 95%);
+--color-noticeBackground: hsl(88, 73%, 85%);
+--color-noticeTextMenu: hsl(88, 73%, 75%);
+--color-noticeBackgroundDark: hsl(86, 64%, 54%);
+--color-noticeTextLight: hsl(89, 67%, 31%);
+--color-noticeBorder: hsl(86, 64%, 54%);
+--color-noticeText: hsl(86, 64%, 40%);
+--color-noticeTextDark: hsl(88, 72%, 15%);
+
+/* Bare Buttons */
+--color-buttonBareText: hsl(234, 87%, 37%);
+--color-buttonBareTextHover: hsl(234, 87%, 37%);
+--color-buttonBareBackground: transparent;
+--color-buttonBareDisabledBackground: transparent;
+--color-buttonBareBackgroundActive: rgba(100, 100, 100, .25);
+--color-buttonBareBackgroundHover: rgba(100, 100, 100, .15);
+--color-buttonBareDisabledText: hsl(234, 27%, 70%);
+
+/* Budget Page */
+--color-budgetNumberNeutral: hsl(0, 2%, 10%);
+--color-budgetNumberPositive: hsl(0, 2%, 10%);
+--color-templateNumberUnderFunded: hsl(40, 80%, 40%);
+--color-budgetNumberNegative: hsl(356, 75%, 53%);
+--color-toBudgetNegative: hsl(356, 75%, 53%);
+--color-budgetCurrentMonth: hsl(0, 0%, 100%);
+--color-budgetOtherMonth: hsl(240, 78%, 99%);
+--color-budgetHeaderCurrentMonth: hsl(240, 78%, 99%);
+--color-budgetHeaderOtherMonth: hsl(240, 78%, 99%);
+--color-budgetNumberZero: hsl(0, 2%, 10%);
+--color-templateNumberFunded: hsl(88, 71%, 30%);
+--color-toBudgetPositive: hsl(88, 71%, 30%);
+--color-toBudgetZero: hsl(89, 70%, 30%);
+
+--color-calendarItemBackground: hsl(211, 40%, 23%);
+--color-calendarBackground: hsl(209, 63%, 16%);
+--color-calendarCellBackground: hsl(240, 49%, 94%);
+--color-calendarText: hsl(234, 98%, 98%);
+--color-calendarItemText: hsl(234, 100%, 90%);
+--color-calendarSelectedBackground: hsl(234, 22%, 50%);
+
+--color-cardBackground: hsl(0, 0%, 100%);
+--color-cardShadow: hsl(234, 35%, 30%);
+--color-cardBorder: hsl(234, 87%, 37%);
+
+--color-checkboxText: hsl(0, 0%, 100%);
+--color-checkboxToggleDisabled: hsl(235, 10%, 79%);
+--color-checkboxToggleBackground: hsl(234, 8%, 50%);
+--color-checkboxShadowSelected: hsl(234, 100%, 69%);
+--color-checkboxBackgroundSelected: hsl(234, 85%, 55%);
+--color-checkboxBorderSelected: hsl(234, 85%, 55%);
+--color-checkboxToggleBackgroundSelected: hsl(234, 87%, 43%);
+
+--color-floatingActionBarText: hsl(234, 98%, 98%);
+--color-floatingActionBarBackground: hsl(234, 82%, 60%);
+--color-floatingActionBarBorder: hsl(234, 82%, 60%);
+
+--color-formInputBackgroundSelected: hsl(0, 0%, 100%);
+--color-formInputTextSelection: hsl(240, 49%, 94%);
+--color-formInputBackground: hsl(234, 98%, 98%);
+--color-formInputTextReadOnlySelection: hsl(234, 98%, 98%);
+--color-formInputTextSelected: hsl(234, 98%, 98%);
+--color-formInputBorder: hsl(234, 100%, 90%);
+--color-formInputTextPlaceholderSelected: hsl(234, 31%, 80%);
+--color-formInputTextPlaceholder: hsl(234, 27%, 70%);
+--color-formInputText: hsl(0, 2%, 10%);
+--color-formLabelBackground: hsl(234, 100%, 77%);
+--color-formLabelText: hsl(234, 80%, 46%);
+--color-formInputTextHighlight: hsl(234, 99%, 78%);
+--color-formInputShadowSelected: hsl(234, 97%, 70%);
+--color-formInputBackgroundSelection: hsl(234, 80%, 50%);
+--color-formInputBorderSelected: hsl(234, 80%, 50%);
+
+--color-markdownLight: hsl(234, 93%, 96%);
+--color-markdownNormal: hsl(234, 96%, 88%);
+--color-markdownDark: hsl(234, 82%, 60%);
+
+/* Menus */
+--color-buttonMenuSelectedBackground: hsl(54, 95%, 76%);
+--color-buttonMenuSelectedBorder: hsl(54, 95%, 76%);
+--color-buttonMenuSelectedBackgroundHover: hsl(53, 88%, 66%);
+--color-buttonMenuSelectedTextHover: hsl(35, 82%, 29%);
+--color-buttonMenuBackground: transparent;
+--color-buttonMenuBackgroundHover: rgba(200, 200, 200, 0.25);
+--color-buttonMenuText: hsl(240, 49%, 94%);
+--color-buttonMenuTextHover: hsl(234, 98%, 98%);
+--color-buttonMenuBorder: hsl(234, 22%, 50%);
+--color-buttonMenuSelectedText: hsl(88, 71%, 25%);
+--color-menuAutoCompleteBackground: hsl(209, 63%, 16%);
+--color-menuAutoCompleteTextHeader: hsl(52, 96%, 88%);
+--color-menuBackground: hsl(0, 0%, 100%);
+--color-menuAutoCompleteText: hsl(0, 0%, 100%);
+--color-menuAutoCompleteItemTextHover: hsl(0, 0%, 100%);
+--color-menuAutoCompleteItemText: hsl(0, 0%, 100%);
+--color-menuItemBackgroundHover: hsl(240, 49%, 94%);
+--color-menuBorder: hsl(240, 49%, 94%);
+--color-menuItemBackground: hsl(234, 98%, 98%);
+--color-menuItemTextHeader: hsl(235, 23%, 60%);
+--color-menuKeybindingText: hsl(235, 23%, 60%);
+--color-menuAutoCompleteBackgroundHover: hsl(234, 29%, 40%);
+--color-menuItemText: hsl(0, 2%, 10%);
+--color-menuItemTextHover: hsl(0, 2%, 10%);
+--color-menuAutoCompleteTextHover: hsl(88, 73%, 85%);
+--color-menuBorderHover: hsl(234, 93%, 96%);
+--color-menuItemTextSelected: hsl(234, 97%, 70%);
+
+--color-mobileNavBackground: hsl(0, 0%, 100%);
+--color-mobileHeaderTextHover: rgba(200, 200, 200, .15);
+--color-mobileHeaderTextSubdued: hsl(235, 10%, 79%);
+--color-mobileNavItem: hsl(236, 8%, 64%);
+--color-mobileHeaderText: hsl(234, 98%, 98%);
+--color-mobilePageBackground: hsl(234, 98%, 98%);
+--color-mobileAccountShadow: hsl(234, 27%, 70%);
+--color-mobileAccountText: hsl(234, 88%, 34%);
+--color-mobileHeaderBackground: hsl(234, 82%, 60%);
+--color-mobileViewTheme: hsl(234, 82%, 60%);
+--color-mobileNavItemSelected: hsl(234, 80%, 50%);
+--color-mobileTransactionSelected: hsl(234, 80%, 50%);
+--color-mobileConfigServerViewTheme: hsl(234, 80%, 50%);
+
+--color-modalBackground: hsl(0, 0%, 100%);
+--color-modalBorder: hsl(0, 0%, 100%);
+
+--color-buttonNormalBackground: hsl(0, 0%, 100%);
+--color-buttonNormalBackgroundHover: hsl(0, 0%, 100%);
+--color-buttonNormalSelectedText: hsl(0, 0%, 100%);
+--color-buttonNormalDisabledBackground: hsl(0, 0%, 100%);
+--color-buttonNormalShadow: rgba(0, 0, 0, 0.2);
+--color-buttonNormalBorder: hsl(234, 100%, 90%);
+--color-buttonNormalDisabledBorder: hsl(234, 100%, 90%);
+--color-buttonNormalDisabledText: hsl(234, 27%, 70%);
+--color-buttonNormalText: hsl(0, 2%, 10%);
+--color-buttonNormalTextHover: hsl(0, 2%, 10%);
+--color-buttonNormalSelectedBackground: hsl(234, 80%, 46%);
+
+--color-numberNegative: hsl(356, 75%, 53%);
+--color-numberNeutral: hsl(0, 2%, 10%);
+--color-numberPositive: hsl(89, 67%, 31%);
+
+--color-overlayBackground: rgba(0, 0, 0, 0.3);
+
+--color-pageText: hsl(0, 2%, 10%);
+--color-pageBackgroundLineTop: hsl(0, 0%, 100%);
+--color-pageBackground: hsl(234, 98%, 98%);
+--color-pageBackgroundTopLeft: hsl(240, 49%, 94%);
+--color-pageBackgroundLineMid: hsl(240, 49%, 94%);
+--color-pageBackgroundModalActive: hsl(234, 31%, 80%);
+--color-pageTextSubdued: hsl(235, 22%, 60%);
+--color-pageTextLight: hsl(234, 22%, 50%);
+--color-pageTextDark: hsl(0, 2%, 10%);
+--color-pageBackgroundBottomRight: hsl(234, 99%, 85%);
+--color-pageBackgroundLineBottom: hsl(234, 99%, 85%);
+--color-pageTextLinkLight: hsl(234, 100%, 69%);
+--color-pageTextLink: hsl(234, 80%, 46%);
+--color-pageTextPositive: hsl(234, 87%, 43%);
+
+--color-pillBackgroundLight: hsl(234, 98%, 98%);
+--color-pillBackground: hsl(234, 100%, 90%);
+--color-pillBorder: hsl(234, 100%, 90%);
+--color-pillTextSubdued: hsl(234, 31%, 80%);
+--color-pillBorderDark: hsl(234, 27%, 70%);
+--color-pillText: hsl(0, 2%, 10%);
+--color-pillBackgroundSelected: hsl(234, 99%, 85%);
+--color-pillTextSelected: hsl(234, 97%, 27%);
+--color-pillBorderSelected: hsl(234, 80%, 50%);
+--color-pillTextHighlighted: hsl(234, 87%, 43%);
+
+--color-buttonPrimaryText: hsl(0, 0%, 100%);
+--color-buttonPrimaryTextHover: hsl(0, 0%, 100%);
+--color-buttonPrimaryDisabledText: hsl(0, 0%, 100%);
+--color-buttonPrimaryShadow: rgba(0, 0, 0, 0.3);
+--color-buttonPrimaryDisabledBackground: hsl(234, 27%, 70%);
+--color-buttonPrimaryDisabledBorder: hsl(234, 27%, 70%);
+--color-buttonPrimaryBackgroundHover: hsl(234, 97%, 70%);
+--color-buttonPrimaryBackground: hsl(234, 80%, 50%);
+--color-buttonPrimaryBorder: hsl(234, 80%, 50%);
+
+/* Reports */
+--color-reportsRed: hsl(1, 81%, 63%);
+--color-reportsBlue: hsl(234, 95%, 63%);
+--color-reportsGreen: hsl(164, 100%, 31%);
+--color-reportsGray: hsl(236, 8%, 64%);
+--color-reportsLabel: hsl(211, 40%, 23%);
+--color-reportsInnerLabel: hsl(211, 40%, 23%);
+--color-chartQual1: #5359fd;
+--color-chartQual2: #94d53f;
+--color-chartQual3: #f6ca1e;
+--color-chartQual4: #cf5e66;
+--color-chartQual5: #7583ff;
+--color-chartQual6: #ace765;
+--color-chartQual7: #f7d455;
+--color-chartQual8: #e48686;
+--color-chartQual9: #b3baff;
+--color-reportsNumberNegative: hsl(356, 75%, 53%);
+--color-reportsNumberNeutral: hsl(0, 2%, 10%);
+--color-reportsNumberPositive: hsl(91, 61%, 32%);
+--color-reportsChartFill: hsl(234, 100%, 82%);
+
+--color-sidebarItemBackgroundHover: hsl(238, 29%, 34%);
+--color-sidebarItemBackgroundPending: hsl(54, 95%, 76%);
+--color-sidebarItemBackgroundFailed: hsl(0, 90%, 69%);
+--color-sidebarItemText: hsl(0, 0%, 100%);
+--color-sidebarBackground: hsl(237, 51%, 23%);
+--color-sidebarItemBackgroundPositive: hsl(86, 64%, 54%);
+--color-sidebarItemAccentSelected: hsl(234, 99%, 78%);
+--color-sidebarItemTextSelected: hsl(238, 100%, 90%);
+--color-sidebarBudgetName: #94d53f;
+--color-tableTextItemAdded: #0000ff;
+--color-sidebarItemTextUpdated: #94d53f;  
+
+--color-tableText: hsl(0, 2%, 10%);
+--color-tableRowHeaderText: hsl(211, 40%, 23%);
+--color-tableBackground: hsl(0, 0%, 100%);
+--color-tableHeaderBackground: hsl(0, 0%, 100%);
+--color-tableTextSubdued: hsl(235, 22%, 60%);
+--color-tableBorder: hsl(240, 49%, 94%);
+--color-tableRowBackgroundHover: hsl(234, 98%, 98%);
+--color-tableRowHeaderBackground: hsl(234, 98%, 98%);
+--color-tableTextLight: hsl(235, 23%, 60%);
+--color-tableBorderSeparator: hsl(235, 23%, 60%);
+--color-tableTextInactive: hsl(234, 22%, 50%);
+--color-tableHeaderText: hsl(234, 29%, 40%);
+--color-tableTextSelected: hsl(234, 35%, 30%);
+--color-tableRowBackgroundHighlightText: hsl(0, 2%, 10%);
+--color-tableTextHover: hsl(0, 2%, 10%);
+--color-tableRowBackgroundHighlight: hsl(235, 98%, 95%);
+--color-tableBorderHover: hsl(234, 82%, 60%);
+--color-tableBorderSelected: hsl(234, 80%, 50%);
+
+--color-noteTagText: hsl(0, 0%, 0%);
+--color-noteTagBackground: hsl(234, 100%, 92%);
+--color-noteTagDefault: hsl(234, 100%, 92%);
+--color-noteTagBackgroundHover: hsl(234, 96%, 88%);
+
+--color-tooltipBackground: hsl(0, 0%, 100%);
+--color-tooltipBorder: hsl(234, 100%, 90%);
+--color-tooltipText: hsl(0, 2%, 10%);
+
+--color-upcomingBackground: hsl(234, 93%, 96%);
+--color-upcomingBorder: hsl(234, 80%, 50%);
+--color-upcomingText: hsl(234, 87%, 37%);
+
+}
+
+/* --- OMV AUTOMATED MAPPING --- */
+:root, .omv-dark-theme {
+  --theme-primary: var(--color-buttonPrimaryBackground, var(--color-sidebarBackground, #5dacdf));
+}
+
+body, .omv-dark-theme, .mat-app-background, .mat-typography {
+  background-color: var(--color-pageBackground) !important;
+  --mat-background-color-body: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer-container, .omv-dark-theme .mat-drawer-container {
+  background-color: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer, .omv-dark-theme .mat-drawer {
+  background-color: var(--color-sidebarBackground) !important;
+  color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+/* Navbar / Sidebar text colors */
+.mat-drawer .mat-list-item,
+.omv-dark-theme .mat-drawer .mat-list-item,
+.mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.omv-dark-theme .mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.mat-drawer a, .omv-dark-theme .mat-drawer a {
+    color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+.mat-card, .omv-dark-theme .mat-card {
+  background-color: var(--color-cardBackground, var(--color-pageBackground)) !important;
+  color: var(--color-pageText) !important;
+}
+
+/* Datatable Text */
+.ngx-datatable, .omv-dark-theme .ngx-datatable,
+.ngx-datatable .datatable-body-cell, .omv-dark-theme .ngx-datatable .datatable-body-cell,
+.ngx-datatable .datatable-header-cell, .omv-dark-theme .ngx-datatable .datatable-header-cell {
+  color: var(--color-tableText, var(--color-pageText)) !important;
+}

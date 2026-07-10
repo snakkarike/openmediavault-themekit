@@ -1,0 +1,318 @@
+:root {
+  --alucard-background: #FFFBEB;
+  --alucard-background-dark: #CECCC0;
+  --alucard-background-darker: #BCBAB3;
+  --alucard-background-light: #DEDCCF;
+  --alucard-background-lighter: #ECE9DF;
+  --alucard-current-line: #E2DECA;
+  --alucard-selection: #CFCFDE;
+  --alucard-foreground: #1F1F1F;
+  --alucard-comment: #6C664B;
+  --alucard-red: #CB3A2A;
+  --alucard-orange: #A34D14;
+  --alucard-yellow: #846E15;
+  --alucard-green: #14710A;
+  --alucard-cyan: #036A96;
+  --alucard-purple: #644AC9;
+  --alucard-pink: #A3144D;
+  --alucard-purple-20: rgba(100, 74, 201, 0.2);
+  --alucard-foreground-10: rgba(31, 31, 31, 0.1);
+  --alucard-foreground-20: rgba(31, 31, 31, 0.2);
+  --alucard-shadow: rgba(108, 102, 75, 0.24);
+  --alucard-overlay: rgba(31, 31, 31, 0.18);
+  --alucard-muted-overlay: rgba(31, 31, 31, 0.08);
+  --alucard-hover-overlay: rgba(31, 31, 31, 0.12);
+
+  --color-pageBackground: var(--alucard-background);
+  --color-pageBackgroundModalActive: var(--alucard-background-light);
+  --color-pageBackgroundTopLeft: var(--alucard-background);
+  --color-pageBackgroundBottomRight: var(--alucard-background-light);
+  --color-pageBackgroundLineTop: var(--alucard-purple);
+  --color-pageBackgroundLineMid: var(--alucard-background);
+  --color-pageBackgroundLineBottom: var(--alucard-cyan);
+  --color-pageText: var(--alucard-foreground);
+  --color-pageTextLight: var(--alucard-foreground);
+  --color-pageTextSubdued: var(--alucard-comment);
+  --color-pageTextDark: var(--alucard-foreground);
+  --color-pageTextPositive: var(--alucard-green);
+  --color-pageTextLink: var(--alucard-cyan);
+  --color-pageTextLinkLight: var(--alucard-purple);
+
+  --color-cardBackground: var(--alucard-background-light);
+  --color-cardBorder: var(--alucard-background-darker);
+  --color-cardShadow: var(--alucard-shadow);
+
+  --color-tableBackground: var(--alucard-background);
+  --color-tableRowBackgroundAlternate: var(--color-tableBackground);
+  --color-tableRowBackgroundHover: var(--alucard-background-lighter);
+  --color-tableText: var(--alucard-foreground);
+  --color-tableTextItemAdded: var(--color-tableText);
+  --color-tableTextLight: var(--color-tableText);
+  --color-tableTextSubdued: var(--alucard-comment);
+  --color-tableTextSelected: var(--alucard-foreground);
+  --color-tableTextHover: var(--alucard-cyan);
+  --color-tableTextInactive: var(--alucard-comment);
+  --color-tableHeaderText: var(--alucard-foreground);
+  --color-tableHeaderBackground: var(--alucard-background-light);
+  --color-tableBorder: var(--alucard-background-darker);
+  --color-tableBorderSelected: var(--alucard-purple);
+  --color-tableBorderHover: var(--alucard-cyan);
+  --color-tableBorderSeparator: var(--alucard-comment);
+  --color-tableRowBackgroundHighlight: var(--alucard-background-light);
+  --color-tableRowBackgroundHighlightText: var(--alucard-foreground);
+  --color-tableRowHeaderBackground: var(--alucard-background-light);
+  --color-tableRowHeaderText: var(--alucard-foreground);
+
+  --color-numberPositive: var(--alucard-green);
+  --color-numberNegative: var(--alucard-red);
+  --color-numberNeutral: var(--alucard-comment);
+  --color-budgetNumberNegative: var(--color-numberNegative);
+  --color-budgetNumberZero: var(--color-tableTextSubdued);
+  --color-budgetNumberNeutral: var(--color-tableText);
+  --color-budgetNumberPositive: var(--color-budgetNumberNeutral);
+  --color-templateNumberFunded: var(--color-numberPositive);
+  --color-templateNumberUnderFunded: var(--alucard-orange);
+  --color-toBudgetPositive: var(--color-numberPositive);
+  --color-toBudgetZero: var(--color-numberPositive);
+  --color-toBudgetNegative: var(--color-budgetNumberNegative);
+
+  --color-sidebarBackground: var(--alucard-background-dark);
+  --color-sidebarItemBackgroundPending: var(--alucard-orange);
+  --color-sidebarItemBackgroundPositive: var(--alucard-green);
+  --color-sidebarItemBackgroundFailed: var(--alucard-red);
+  --color-sidebarItemAccentSelected: var(--alucard-purple);
+  --color-sidebarItemBackgroundHover: var(--alucard-background-lighter);
+  --color-sidebarItemText: var(--alucard-foreground);
+  --color-sidebarItemTextUpdated: var(--color-sidebarItemText);
+  --color-sidebarItemTextSelected: var(--alucard-purple);
+  --color-sidebarBudgetName: var(--alucard-comment);
+
+  --color-menuBackground: var(--alucard-background-light);
+  --color-menuItemBackground: var(--alucard-background-light);
+  --color-menuItemBackgroundHover: var(--alucard-background-lighter);
+  --color-menuItemText: var(--alucard-foreground);
+  --color-menuItemTextHover: var(--alucard-purple);
+  --color-menuItemTextSelected: var(--alucard-foreground);
+  --color-menuItemTextHeader: var(--alucard-purple);
+  --color-menuBorder: var(--alucard-background-darker);
+  --color-menuBorderHover: var(--alucard-purple);
+  --color-menuKeybindingText: var(--alucard-comment);
+  --color-menuAutoCompleteBackground: var(--alucard-background);
+  --color-menuAutoCompleteBackgroundHover: var(--alucard-background-dark);
+  --color-menuAutoCompleteText: var(--alucard-foreground);
+  --color-menuAutoCompleteTextHover: var(--alucard-foreground);
+  --color-menuAutoCompleteTextHeader: var(--alucard-purple);
+  --color-menuAutoCompleteItemTextHover: var(--alucard-foreground);
+  --color-menuAutoCompleteItemText: var(--color-menuItemText);
+
+  --color-modalBackground: var(--alucard-background-light);
+  --color-modalBorder: var(--alucard-background-darker);
+  --color-mobileHeaderBackground: var(--alucard-background);
+  --color-mobileHeaderText: var(--alucard-pink);
+  --color-mobileHeaderTextSubdued: var(--alucard-comment);
+  --color-mobileHeaderTextHover: var(--alucard-hover-overlay);
+  --color-mobilePageBackground: var(--alucard-background);
+  --color-mobileNavBackground: var(--alucard-background-light);
+  --color-mobileNavItem: var(--alucard-foreground);
+  --color-mobileNavItemSelected: var(--alucard-pink);
+  --color-mobileAccountShadow: var(--color-cardShadow);
+  --color-mobileAccountText: var(--alucard-cyan);
+  --color-mobileTransactionSelected: var(--alucard-purple);
+
+  --color-mobileViewTheme: var(--color-mobileHeaderBackground);
+  --color-mobileConfigServerViewTheme: var(--alucard-purple);
+
+  --color-markdownNormal: var(--alucard-purple);
+  --color-markdownDark: var(--alucard-pink);
+  --color-markdownLight: var(--alucard-cyan);
+
+  --color-buttonMenuText: var(--alucard-foreground);
+  --color-buttonMenuTextHover: var(--color-buttonMenuText);
+  --color-buttonMenuBackground: transparent;
+  --color-buttonMenuBackgroundHover: var(--alucard-foreground-10);
+  --color-buttonMenuBorder: var(--alucard-comment);
+  --color-buttonMenuSelectedText: var(--alucard-foreground);
+  --color-buttonMenuSelectedTextHover: var(--alucard-foreground);
+  --color-buttonMenuSelectedBackground: var(--alucard-background-light);
+  --color-buttonMenuSelectedBackgroundHover: var(--alucard-background-lighter);
+  --color-buttonMenuSelectedBorder: var(--alucard-background-darker);
+
+  --color-buttonPrimaryText: var(--alucard-foreground);
+  --color-buttonPrimaryTextHover: var(--color-buttonPrimaryText);
+  --color-buttonPrimaryBackground: var(--alucard-foreground-20);
+  --color-buttonPrimaryBackgroundHover: var(--alucard-foreground-10);
+  --color-buttonPrimaryBorder: var(--alucard-background-darker);
+  --color-buttonPrimaryShadow: var(--alucard-shadow);
+  --color-buttonPrimaryDisabledText: var(--alucard-comment);
+  --color-buttonPrimaryDisabledBackground: var(--alucard-background-light);
+  --color-buttonPrimaryDisabledBorder: var(--color-buttonPrimaryDisabledBackground);
+
+  --color-buttonNormalText: var(--alucard-foreground);
+  --color-buttonNormalTextHover: var(--alucard-foreground);
+  --color-buttonNormalBackground: var(--alucard-foreground-20);
+  --color-buttonNormalBackgroundHover: var(--alucard-foreground-10);
+  --color-buttonNormalBorder: var(--alucard-background-darker);
+  --color-buttonNormalShadow: var(--alucard-shadow);
+  --color-buttonNormalSelectedText: var(--alucard-foreground);
+  --color-buttonNormalSelectedBackground: var(--alucard-purple-20);
+  --color-buttonNormalDisabledText: var(--alucard-comment);
+  --color-buttonNormalDisabledBackground: var(--alucard-background-light);
+  --color-buttonNormalDisabledBorder: var(--alucard-background-darker);
+
+  --color-calendarText: var(--alucard-foreground);
+  --color-calendarBackground: var(--alucard-background);
+  --color-calendarItemText: var(--alucard-foreground);
+  --color-calendarItemBackground: var(--alucard-background-light);
+  --color-calendarSelectedBackground: var(--color-buttonNormalSelectedBackground);
+
+  --color-buttonBareText: var(--color-pageText);
+  --color-buttonBareTextHover: var(--alucard-cyan);
+  --color-buttonBareDisabledText: var(--color-pageTextSubdued);
+  --color-buttonBareBackground: transparent;
+  --color-buttonBareDisabledBackground: var(--color-buttonBareBackground);
+  --color-buttonBareBackgroundHover: var(--alucard-muted-overlay);
+  --color-buttonBareBackgroundActive: var(--alucard-hover-overlay);
+
+  --color-noticeBackground: var(--alucard-background-light);
+  --color-noticeBackgroundLight: var(--alucard-selection);
+  --color-noticeBackgroundDark: var(--alucard-green);
+  --color-noticeText: var(--alucard-green);
+  --color-noticeTextLight: var(--alucard-green);
+  --color-noticeTextDark: var(--alucard-foreground);
+  --color-noticeTextMenu: var(--alucard-green);
+  --color-noticeTextMenuHover: var(--alucard-background);
+  --color-noticeBorder: var(--alucard-green);
+  --color-warningBackground: var(--alucard-background-light);
+  --color-warningText: var(--alucard-orange);
+  --color-warningTextLight: var(--alucard-yellow);
+  --color-warningTextDark: var(--alucard-foreground);
+  --color-warningBorder: var(--alucard-orange);
+  --color-errorBackground: var(--alucard-background-light);
+  --color-errorText: var(--alucard-red);
+  --color-errorTextDark: var(--alucard-foreground);
+  --color-errorTextDarker: var(--alucard-foreground);
+  --color-errorTextMenu: var(--alucard-red);
+  --color-errorBorder: var(--alucard-red);
+  --color-upcomingBackground: var(--alucard-background-light);
+  --color-upcomingText: var(--alucard-purple);
+  --color-upcomingBorder: var(--color-tableBorder);
+
+  --color-formLabelText: var(--alucard-purple);
+  --color-formLabelBackground: var(--alucard-background);
+  --color-formInputBackground: var(--alucard-background-lighter);
+  --color-formInputBackgroundSelected: var(--alucard-background-lighter);
+  --color-formInputBackgroundSelection: var(--alucard-selection);
+  --color-formInputBorder: var(--alucard-background-dark);
+  --color-formInputTextReadOnlySelection: var(--alucard-background-lighter);
+  --color-formInputBorderSelected: var(--alucard-purple);
+  --color-formInputText: var(--alucard-foreground);
+  --color-formInputTextSelected: var(--alucard-foreground);
+  --color-formInputTextPlaceholder: var(--alucard-comment);
+  --color-formInputTextPlaceholderSelected: var(--alucard-comment);
+  --color-formInputTextSelection: var(--alucard-foreground);
+  --color-formInputShadowSelected: var(--alucard-purple);
+  --color-formInputTextHighlight: var(--alucard-pink);
+  --color-checkboxText: var(--color-tableText);
+  --color-checkboxBackgroundSelected: var(--alucard-background-lighter);
+  --color-checkboxBorderSelected: var(--alucard-background-lighter);
+  --color-checkboxShadowSelected: var(--alucard-background-darker);
+  --color-checkboxToggleBackground: var(--alucard-comment);
+  --color-checkboxToggleBackgroundSelected: var(--alucard-foreground-20);
+  --color-checkboxToggleDisabled: var(--alucard-background-light);
+
+  --color-pillBackground: var(--alucard-background-light);
+  --color-pillBackgroundLight: var(--alucard-background-lighter);
+  --color-pillText: var(--alucard-foreground);
+  --color-pillTextHighlighted: var(--alucard-pink);
+  --color-pillBorder: var(--alucard-background-darker);
+  --color-pillBorderDark: var(--color-pillBorder);
+  --color-pillBackgroundSelected: var(--alucard-selection);
+  --color-pillTextSelected: var(--alucard-foreground);
+  --color-pillBorderSelected: var(--alucard-background-darker);
+  --color-pillTextSubdued: var(--alucard-comment);
+
+  --color-reportsRed: var(--alucard-red);
+  --color-reportsBlue: var(--alucard-cyan);
+  --color-reportsGreen: var(--alucard-green);
+  --color-reportsGray: var(--alucard-comment);
+  --color-reportsLabel: var(--color-pageText);
+  --color-reportsInnerLabel: var(--alucard-background);
+  --color-reportsNumberPositive: var(--color-numberPositive);
+  --color-reportsNumberNegative: var(--color-numberNegative);
+  --color-reportsNumberNeutral: var(--color-numberNeutral);
+  --color-reportsChartFill: var(--color-reportsNumberPositive);
+
+  --color-noteTagBackground: var(--alucard-background-light);
+  --color-noteTagBackgroundHover: var(--alucard-selection);
+  --color-noteTagDefault: var(--alucard-purple);
+  --color-noteTagText: var(--alucard-foreground);
+
+  --color-budgetOtherMonth: var(--alucard-background-dark);
+  --color-budgetCurrentMonth: var(--color-tableBackground);
+  --color-budgetHeaderOtherMonth: var(--alucard-background-light);
+  --color-budgetHeaderCurrentMonth: var(--color-tableHeaderBackground);
+
+  --color-floatingActionBarBackground: var(--alucard-background-dark);
+  --color-floatingActionBarBorder: var(--alucard-purple);
+  --color-floatingActionBarText: var(--alucard-foreground);
+
+  --color-tooltipText: var(--alucard-foreground);
+  --color-tooltipBackground: var(--alucard-current-line);
+  --color-tooltipBorder: var(--alucard-selection);
+
+  --color-calendarCellBackground: var(--alucard-background);
+
+  --color-overlayBackground: var(--alucard-overlay);
+
+  --color-chartQual1: var(--alucard-cyan);
+  --color-chartQual2: var(--alucard-purple);
+  --color-chartQual3: var(--alucard-green);
+  --color-chartQual4: var(--alucard-pink);
+  --color-chartQual5: var(--alucard-orange);
+  --color-chartQual6: var(--alucard-yellow);
+  --color-chartQual7: var(--alucard-red);
+  --color-chartQual8: var(--alucard-comment);
+  --color-chartQual9: var(--alucard-foreground);
+}
+
+/* --- OMV AUTOMATED MAPPING --- */
+:root, .omv-dark-theme {
+  --theme-primary: var(--color-buttonPrimaryBackground, var(--color-sidebarBackground, #5dacdf));
+}
+
+body, .omv-dark-theme, .mat-app-background, .mat-typography {
+  background-color: var(--color-pageBackground) !important;
+  --mat-background-color-body: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer-container, .omv-dark-theme .mat-drawer-container {
+  background-color: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer, .omv-dark-theme .mat-drawer {
+  background-color: var(--color-sidebarBackground) !important;
+  color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+/* Navbar / Sidebar text colors */
+.mat-drawer .mat-list-item,
+.omv-dark-theme .mat-drawer .mat-list-item,
+.mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.omv-dark-theme .mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.mat-drawer a, .omv-dark-theme .mat-drawer a {
+    color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+.mat-card, .omv-dark-theme .mat-card {
+  background-color: var(--color-cardBackground, var(--color-pageBackground)) !important;
+  color: var(--color-pageText) !important;
+}
+
+/* Datatable Text */
+.ngx-datatable, .omv-dark-theme .ngx-datatable,
+.ngx-datatable .datatable-body-cell, .omv-dark-theme .ngx-datatable .datatable-body-cell,
+.ngx-datatable .datatable-header-cell, .omv-dark-theme .ngx-datatable .datatable-header-cell {
+  color: var(--color-tableText, var(--color-pageText)) !important;
+}

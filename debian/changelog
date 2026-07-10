@@ -1,0 +1,12 @@
+openmediavault-themekit (1.0.0) stable; urgency=medium
+
+  * Initial stable release of OpenMediaVault Themekit.
+  * Added extensive collection of pre-configured themes (Catppuccin, Rose Pine, Gruvbox, Nord, Dracula, etc.).
+  * Added dynamic styling engine with fallback variables to ensure uniform UI scaling across custom themes.
+  * Fixed contrast issues for dropdowns, popover menus, and sidebar list items in both light and dark modes.
+  * Implemented dynamic logo inversion for themes with lighter backgrounds.
+  * Corrected active list item backgrounds and icon color inheritances for seamless integration with Angular Material UI.
+  * Included Salt deploy modules and APT hooks to guarantee UI state persistence across system updates.
+  * Developed Settings page for effortlessly toggling modes, accents, and wallpapers.
+
+ -- Saurabh Nakkarike <you@example.com>  Sat, 11 Jul 2026 00:45:00 +0530

@@ -1,0 +1,296 @@
+/* You Need A - Theme! Dark Version */
+/* Theme is in HSL (Hue, Saturation, Lightness) format to make it easy for you to change the hue, saturation or lightness of any color to your satisfaction without knowing hex codes. */
+/* Higher percentage is more saturated and lighter. */
+
+:root {
+
+/* Admonitions */  
+--color-errorBackground: hsl(350, 94%, 28%);
+--color-errorBorder: hsl(356, 75%, 53%);
+--color-errorText: hsl(0, 98%, 80%);
+--color-errorTextDark: hsl(0, 100%, 87%);
+--color-errorTextDarker: hsl(0, 100%, 87%);
+--color-errorTextMenu: hsl(0, 98%, 80%);
+--color-noticeBackground: hsl(168, 81%, 23%);
+--color-noticeBackgroundDark: hsl(162, 63%, 41%);
+--color-noticeBackgroundLight: hsl(170, 99%, 15%);
+--color-noticeBorder: hsl(168, 81%, 23%);
+--color-noticeText: hsl(86, 70%, 43%);
+--color-noticeTextDark: hsl(154, 74%, 87%);
+--color-noticeTextLight: hsl(86, 70%, 43%);
+--color-noticeTextMenu: hsl(86, 70%, 43%);
+--color-warningBackground: hsl(35, 82%, 29%);
+--color-warningBorder: hsl(47, 79%, 51%);
+--color-warningText: hsl(53, 88%, 66%);
+--color-warningTextDark: hsl(49, 100%, 96%);
+--color-warningTextLight: hsl(47, 79%, 51%);
+  
+--color-buttonBareBackground: transparent;
+--color-buttonBareBackgroundActive: rgba(200, 200, 200, .5);
+--color-buttonBareBackgroundHover: rgba(200, 200, 200, .3);
+--color-buttonBareDisabledBackground: transparent;
+--color-buttonBareDisabledText: hsl(235, 10%, 79%);
+--color-buttonBareText: hsl(234, 100%, 82%);
+--color-buttonBareTextHover: hsl(234, 100%, 82%);
+  
+--color-budgetCurrentMonth: hsl(237, 48%, 9%);
+--color-budgetHeaderCurrentMonth: hsl(235, 35%, 20%);
+--color-budgetHeaderOtherMonth: hsl(235, 35%, 20%);
+--color-budgetNumberNegative: hsl(359, 82%, 70%);
+--color-budgetNumberNeutral: hsl(0, 0%, 100%);
+--color-budgetNumberPositive: hsl(0, 0%, 100%);
+--color-budgetNumberZero: hsl(0, 0%, 100%);
+--color-budgetOtherMonth: hsl(240, 14%, 15%);
+--color-templateNumberFunded: hsl(86, 70%, 43%);
+--color-templateNumberUnderFunded: hsl(48, 92%, 54%);
+--color-toBudgetNegative: hsl(359, 82%, 70%);
+--color-toBudgetPositive: hsl(86, 70%, 43%);
+--color-toBudgetZero: hsl(236, 8%, 64%);
+  
+--color-calendarBackground: hsl(234, 64%, 16%);
+--color-calendarCellBackground: hsl(237, 48%, 9%);
+--color-calendarItemBackground: hsl(234, 64%, 16%);
+--color-calendarItemText: hsl(0, 0%, 100%);
+--color-calendarSelectedBackground: hsl(234, 95%, 63%);
+--color-calendarText: hsl(0, 0%, 100%);
+  
+--color-cardBackground: hsl(235, 24%, 10%);
+--color-cardBorder: hsl(234, 95%, 63%);
+--color-cardShadow: hsl(234, 35%, 30%);
+  
+--color-checkboxBackgroundSelected: hsl(234, 85%, 55%);
+--color-checkboxBorderSelected: hsl(234, 85%, 55%);
+--color-checkboxShadowSelected: hsl(234, 100%, 69%);
+--color-checkboxText: hsl(0, 0%, 100%);
+--color-checkboxToggleBackground: hsl(228, 17%, 17%);
+--color-checkboxToggleBackgroundSelected: hsl(234, 87%, 43%);
+--color-checkboxToggleDisabled: hsl(219, 9%, 50%);
+  
+--color-floatingActionBarBackground: hsl(234, 87%, 30%);
+--color-floatingActionBarBorder: hsl(234, 87%, 30%);
+--color-floatingActionBarText: hsl(0, 0%, 100%);
+  
+--color-formInputBackground: hsl(234, 40%, 23%);
+--color-formInputBackgroundSelected: hsl(234, 35%, 30%);
+--color-formInputBackgroundSelection: hsl(234, 82%, 60%);
+--color-formInputBorder: hsl(234, 35%, 30%);
+--color-formInputBorderSelected: hsl(234, 82%, 60%);
+--color-formInputShadowSelected: hsl(234, 99%, 78%);
+--color-formInputText: hsl(0, 0%, 100%);
+--color-formInputTextHighlight: hsl(234, 82%, 60%);
+--color-formInputTextPlaceholder: hsl(236, 8%, 64%);
+--color-formInputTextPlaceholderSelected: hsl(236, 8%, 64%);
+--color-formInputTextReadOnlySelection: hsl(234, 40%, 23%);
+--color-formInputTextSelected: hsl(0, 0%, 0%);
+--color-formInputTextSelection: hsl(234, 40%, 23%);
+--color-formLabelBackground: hsl(234, 97%, 30%);
+--color-formLabelText: hsl(238, 95%, 94%);
+  
+--color-markdownDark: hsl(234, 80%, 50%);
+--color-markdownLight: hsl(234, 87%, 30%);
+--color-markdownNormal: hsl(234, 87%, 37%);
+  
+--color-buttonMenuBackground: transparent;
+--color-buttonMenuBackgroundHover: rgba(200, 200, 200, .25);
+--color-buttonMenuBorder: hsl(234, 30%, 50%);
+--color-buttonMenuSelectedBackground: hsl(54, 95%, 76%);
+--color-buttonMenuSelectedBackgroundHover: hsl(53, 88%, 66%);
+--color-buttonMenuSelectedBorder: hsl(54, 95%, 76%);
+--color-buttonMenuSelectedText: hsl(88, 71%, 30%);
+--color-buttonMenuSelectedTextHover: hsl(35, 82%, 29%);
+--color-buttonMenuText: hsl(0, 0%, 100%);
+--color-buttonMenuTextHover: hsl(0, 0%, 100%);
+  
+--color-menuAutoCompleteBackground: hsl(234, 64%, 16%);
+--color-menuAutoCompleteBackgroundHover: hsl(233, 30%, 40%);
+--color-menuAutoCompleteItemText: hsl(0, 0%, 100%);
+--color-menuAutoCompleteText: hsl(0, 0%, 100%);
+--color-menuAutoCompleteTextHeader: hsl(234, 100%, 78%);
+--color-menuBackground: hsl(234, 40%, 23%);
+--color-menuBorder: hsl(234, 64%, 16%);
+--color-menuBorderHover: hsl(234, 85%, 60%);
+--color-menuItemBackground: hsl(234, 40%, 23%);
+--color-menuItemBackgroundHover: hsl(234, 30%, 50%);
+--color-menuItemText: hsl(0, 0%, 100%);
+--color-menuItemTextHeader: hsl(234, 100%, 78%);
+--color-menuItemTextHover: hsl(0, 0%, 100%);
+--color-menuItemTextSelected: hsl(234, 85%, 60%);
+--color-menuKeybindingText: hsl(234, 100%, 78%);
+  
+--color-mobileAccountShadow: hsl(234, 35%, 30%);
+--color-mobileAccountText: hsl(234, 88%, 34%);
+--color-mobileConfigServerViewTheme: hsl(234, 80%, 50%);
+--color-mobileHeaderBackground: hsl(234, 87%, 30%);
+--color-mobileHeaderText: hsl(0, 0%, 100%);
+--color-mobileHeaderTextHover: rgba(200, 200, 200, .15);
+--color-mobileHeaderTextSubdued: hsl(213, 16%, 78%);
+--color-mobileNavBackground: hsl(234, 40%, 23%);
+--color-mobileNavItem: hsl(212, 34%, 89%);
+--color-mobileNavItemSelected: hsl(234, 85%, 60%);
+--color-mobilePageBackground: hsl(234, 35%, 30%);
+--color-mobileTransactionSelected: hsl(234, 85%, 60%);
+--color-mobileViewTheme: hsl(234, 87%, 30%);
+  
+--color-modalBackground: hsl(235, 24%, 10%);
+--color-modalBorder: hsl(233, 30%, 40%);
+  
+--color-buttonNormalBackground: hsl(234, 40%, 23%);
+--color-buttonNormalBackgroundHover: hsl(233, 30%, 40%);
+--color-buttonNormalBorder: hsl(235, 29%, 70%);
+--color-buttonNormalDisabledBackground: hsl(234, 40%, 23%);
+--color-buttonNormalDisabledBorder: hsl(234, 30%, 50%);
+--color-buttonNormalDisabledText: hsl(234, 30%, 50%);
+--color-buttonNormalSelectedBackground: hsl(234, 90%, 43%);
+--color-buttonNormalSelectedText: hsl(0, 0%, 100%);
+--color-buttonNormalShadow: rgba(0, 0, 0, 0.4);
+--color-buttonNormalText: hsl(0, 0%, 100%);
+--color-buttonNormalTextHover: hsl(0, 0%, 100%);
+  
+--color-numberNegative: hsl(359, 82%, 70%);
+--color-numberNeutral: hsl(0, 0%, 100%);
+--color-numberPositive: hsl(86, 70%, 43%);
+  
+--color-overlayBackground: rgba(0, 0, 0, 0.3);
+  
+--color-pageBackground: hsl(235, 36%, 13%);
+--color-pageBackgroundBottomRight: hsl(228, 17%, 17%);
+--color-pageBackgroundLineBottom: hsl(212, 34%, 89%);
+--color-pageBackgroundLineMid: hsl(234, 64%, 16%);
+--color-pageBackgroundLineTop: hsl(268, 82%, 60%);
+--color-pageBackgroundModalActive: hsl(235, 24%, 10%);
+--color-pageBackgroundTopLeft: hsl(211, 40%, 23%);
+--color-pageText: hsl(0, 0%, 100%);
+--color-pageTextDark: hsl(0, 0%, 100%);
+--color-pageTextLight: hsl(0, 0%, 100%);
+--color-pageTextLink: hsl(234, 100%, 78%);
+--color-pageTextLinkLight: hsl(234, 100%, 78%);
+--color-pageTextPositive: hsl(234, 100%, 78%);
+--color-pageTextSubdued: hsl(235, 10%, 79%);
+  
+--color-pillBackground: hsl(234, 64%, 16%);
+--color-pillBackgroundLight: hsl(234, 64%, 16%);
+--color-pillBackgroundSelected: hsl(234, 90%, 43%);
+--color-pillBorder: hsl(234, 64%, 16%);
+--color-pillBorderDark: hsl(234, 64%, 16%);
+--color-pillBorderSelected: hsl(234, 85%, 60%);
+--color-pillText: hsl(0, 0%, 100%);
+--color-pillTextHighlighted: hsl(234, 100%, 78%);
+--color-pillTextSelected: hsl(0, 0%, 100%);
+--color-pillTextSubdued: hsl(235, 10%, 79%);
+  
+--color-buttonPrimaryBackground: hsl(234, 85%, 60%);
+--color-buttonPrimaryBackgroundHover: hsl(234, 90%, 43%);
+--color-buttonPrimaryBorder: hsl(234, 85%, 60%);
+--color-buttonPrimaryDisabledBackground: hsl(234, 25%, 60%);
+--color-buttonPrimaryDisabledBorder: hsl(234, 25%, 60%);
+--color-buttonPrimaryDisabledText: hsl(234, 35%, 30%);
+--color-buttonPrimaryShadow: rgba(0, 0, 0, 0.6);
+--color-buttonPrimaryText: hsl(0, 0%, 100%);
+--color-buttonPrimaryTextHover: hsl(0, 0%, 100%);
+  
+--color-reportsBlue: hsl(234, 95%, 63%);
+--color-reportsChartFill: hsl(234, 100%, 82%);
+--color-reportsGray: hsl(236, 8%, 64%);
+--color-reportsGreen: hsl(164, 100%, 31%);
+--color-reportsInnerLabel: hsl(234, 40%, 23%);
+--color-reportsLabel: hsl(0, 0%, 100%);
+--color-reportsNumberNegative: hsl(359, 82%, 70%);
+--color-reportsNumberNeutral: hsl(0, 0%, 100%);
+--color-reportsNumberPositive: hsl(86, 70%, 43%);
+--color-reportsRed: hsl(1, 81%, 63%);
+--color-chartQual1: #5359fd;
+--color-chartQual2: #94d53f;
+--color-chartQual3: #f6ca1e;
+--color-chartQual4: #cf5e66;
+--color-chartQual5: #7583ff;
+--color-chartQual6: #ace765;
+--color-chartQual7: #f7d455;
+--color-chartQual8: #e48686;
+--color-chartQual9: #b3baff;
+  
+--color-sidebarBackground: hsl(238, 45%, 13%);
+--color-sidebarItemAccentSelected: hsl(234, 99%, 78%);
+--color-sidebarItemBackgroundFailed: hsl(0, 90%, 69%);
+--color-sidebarItemBackgroundHover: hsl(237, 51%, 23%);
+--color-sidebarItemBackgroundPending: hsl(54, 95%, 76%);
+--color-sidebarItemBackgroundPositive: hsl(86, 64%, 54%);
+--color-sidebarItemText: hsl(0, 0%, 100%);
+--color-sidebarItemTextSelected: hsl(238, 100%, 90%);
+--color-sidebarBudgetName: #94d53f;
+--color-tableTextItemAdded: #ffb61a;
+--color-sidebarItemTextUpdated: #94d53f;  
+  
+--color-tableBackground: hsl(237, 48%, 9%);
+--color-tableBorder: hsl(233, 30%, 40%);
+--color-tableBorderHover: hsl(234, 97%, 70%);
+--color-tableBorderSelected: hsl(234, 85%, 60%);
+--color-tableBorderSeparator: hsl(234, 25%, 60%);
+--color-tableHeaderBackground: hsl(237, 48%, 9%);
+--color-tableHeaderText: hsl(234, 25%, 70%);
+--color-tableRowBackgroundHighlight: hsl(237, 46%, 19%);
+--color-tableRowBackgroundHighlightText: hsl(0, 0%, 100%);
+--color-tableRowBackgroundHover: hsl(237, 46%, 19%);
+--color-tableRowHeaderBackground: hsl(237, 48%, 9%);
+--color-tableRowHeaderText: hsl(0, 0%, 100%);
+--color-tableText: hsl(0, 0%, 100%);
+--color-tableTextHover: hsl(0, 0%, 100%);
+--color-tableTextInactive: hsl(235, 10%, 79%);
+--color-tableTextLight: hsl(0, 0%, 100%);
+--color-tableTextSelected: hsl(0, 0%, 100%);
+--color-tableTextSubdued: hsl(235, 10%, 79%);
+  
+--color-noteTagBackground: hsl(234, 87%, 40%);
+--color-noteTagBackgroundHover: hsl(234, 80%, 50%);
+--color-noteTagDefault: hsl(234, 87%, 40%);
+--color-noteTagText: hsl(0, 0%, 100%);
+  
+--color-tooltipBackground: hsl(234, 40%, 23%);
+--color-tooltipBorder: hsl(234, 35%, 30%);
+--color-tooltipText: hsl(0, 0%, 100%);
+  
+--color-upcomingBackground: hsl(234, 87%, 40%);
+--color-upcomingBorder: hsl(233, 30%, 40%);
+--color-upcomingText: hsl(0, 0%, 100%);
+}
+
+/* --- OMV AUTOMATED MAPPING --- */
+:root, .omv-dark-theme {
+  --theme-primary: var(--color-buttonPrimaryBackground, var(--color-sidebarBackground, #5dacdf));
+}
+
+body, .omv-dark-theme, .mat-app-background, .mat-typography {
+  background-color: var(--color-pageBackground) !important;
+  --mat-background-color-body: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer-container, .omv-dark-theme .mat-drawer-container {
+  background-color: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer, .omv-dark-theme .mat-drawer {
+  background-color: var(--color-sidebarBackground) !important;
+  color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+/* Navbar / Sidebar text colors */
+.mat-drawer .mat-list-item,
+.omv-dark-theme .mat-drawer .mat-list-item,
+.mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.omv-dark-theme .mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.mat-drawer a, .omv-dark-theme .mat-drawer a {
+    color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+.mat-card, .omv-dark-theme .mat-card {
+  background-color: var(--color-cardBackground, var(--color-pageBackground)) !important;
+  color: var(--color-pageText) !important;
+}
+
+/* Datatable Text */
+.ngx-datatable, .omv-dark-theme .ngx-datatable,
+.ngx-datatable .datatable-body-cell, .omv-dark-theme .ngx-datatable .datatable-body-cell,
+.ngx-datatable .datatable-header-cell, .omv-dark-theme .ngx-datatable .datatable-header-cell {
+  color: var(--color-tableText, var(--color-pageText)) !important;
+}

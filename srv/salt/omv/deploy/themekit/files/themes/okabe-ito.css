@@ -1,0 +1,307 @@
+/* Okabe-Ito color palette for accessibility */
+
+:root {
+
+--color-pageBackground: #222222;
+--color-pageText: #d9e2ec;
+--color-pageTextLight: #bbe1f6;
+--color-pageTextSubdued: #919ea4;
+--color-pageTextPositive: #56b4e9;
+--color-pageTextLink: #e69f00;
+--color-pageTextLinkLight: #ffc34d;
+
+--color-pageBackgroundModalActive: #141520;
+--color-pageBackgroundTopLeft: #243b53;
+--color-pageBackgroundBottomRight: #242733;
+--color-pageBackgroundLineTop: #9446ed;
+--color-pageBackgroundLineMid: #102a43;
+--color-pageBackgroundLineBottom: #d9e2ec;
+--color-pageTextDark: #e8ecf0;
+
+--color-cardBackground: #141520;
+--color-cardBorder: #9446ed;
+--color-cardShadow: #334e68;
+
+--color-tableBackground: #333333;
+--color-tableRowBackgroundHover: #222222;
+--color-tableText: #d9e2ec;
+--color-tableHeaderText: #bbe1f6;
+--color-tableHeaderBackground: #434343;
+--color-tableBorder: #222222;
+--color-tableRowHeaderBackground: #434343;
+--color-tableRowHeaderText: #d9e2ec;
+--color-tableTextLight: #bbe1f6;
+--color-tableTextSubdued: #919ea4;
+--color-tableTextInactive: #c2cfd6;
+--color-tableBorderHover: #b88115;
+
+--color-tableTextSelected: #d9e2ec;
+--color-tableTextHover: #829ab1;
+--color-tableBorderSelected: #68622b;
+--color-tableBorderSeparator: #829ab1;
+--color-tableRowBackgroundHighlight: #43382d;
+--color-tableRowBackgroundHighlightText: #fff;
+
+--color-sidebarBackground: #00304d;
+--color-sidebarItemAccentSelected: #e69f00;
+--color-sidebarItemBackgroundHover: #434343;
+--color-sidebarItemText: #d9e2ec;
+--color-sidebarItemTextSelected: #e69f00;
+
+--color-sidebarItemBackgroundPending: #f0e442;
+--color-sidebarItemBackgroundPositive: #009e73;
+--color-sidebarItemBackgroundFailed: #cc79a7;
+--color-sidebarBudgetName: #ffb61a;
+--color-tableTextItemAdded: #ffb61a;
+--color-sidebarItemTextUpdated: #ffb61a;
+  
+
+--color-menuItemText: #d9e2ec;
+--color-menuItemTextSelected: #d9e2ec;
+
+--color-menuBackground: #243b53;
+--color-menuItemBackground: #243b53;
+--color-menuItemBackgroundHover: #627d98;
+--color-menuItemTextHover: #f7fafc;
+--color-menuItemTextHeader: #e69f00;
+--color-menuBorder: #102a43;
+--color-menuBorderHover: #9446ed;
+--color-menuKeybindingText: #e69f00;
+--color-menuAutoCompleteBackground: #102a43;
+--color-menuAutoCompleteBackgroundHover: #486581;
+--color-menuAutoCompleteText: #bcccdc;
+--color-menuAutoCompleteTextHeader: #e69f00;
+--color-menuAutoCompleteItemText: #e8ecf0;
+
+--color-modalBackground: #555555;
+--color-modalBorder: #486581;
+
+--color-mobileViewTheme: #580a94;
+--color-mobileConfigServerViewTheme: #8719e0;
+
+--color-markdownNormal: #690cb0;
+--color-markdownDark: #8719e0;
+--color-markdownLight: #580a94;
+
+--color-buttonMenuText: #bcccdc;
+--color-buttonMenuTextHover: #bcccdc;
+--color-buttonMenuBackground: transparent;
+--color-buttonMenuBackgroundHover: rgba(200, 200, 200, .25);
+--color-buttonMenuBorder: #627d98;
+--color-buttonMenuSelectedText: #0c6b58;
+--color-buttonMenuSelectedTextHover: #87540d;
+--color-buttonMenuSelectedBackground: #fcf088;
+--color-buttonMenuSelectedBackgroundHover: #f5e35d;
+--color-buttonMenuSelectedBorder: #fcf088;
+
+--color-buttonPrimaryDisabledText: #808080;
+--color-buttonPrimaryText: #000000;
+--color-buttonPrimaryTextHover: #000000;
+--color-buttonPrimaryBackground: #f0e442;
+--color-buttonPrimaryBackgroundHover: #bdb10f;
+--color-buttonPrimaryBorder: #000000;
+--color-buttonPrimaryDisabledBackground: #b3b3b3;
+--color-buttonPrimaryDisabledBorder: #b3b3b3;
+
+--color-buttonPrimaryShadow: rgba(0, 0, 0, 0.6);
+
+--color-buttonNormalText: #d9e2ec;
+--color-buttonNormalTextHover: #d9e2ec;
+--color-buttonNormalBackground: #00304d;
+--color-buttonNormalBackgroundHover: #486581;
+--color-buttonNormalBorder: #706e6e;
+--color-buttonNormalDisabledText: #0c688d;
+--color-buttonNormalDisabledBackground: #00304d;
+--color-buttonNormalDisabledBorder: #706e6e;
+
+--color-buttonNormalShadow: rgba(0, 0, 0, 0.4);
+--color-buttonNormalSelectedText: #ffffff;
+--color-buttonNormalSelectedBackground: #0072b2;
+
+--color-calendarText: #fff;
+--color-calendarBackground: #102a43;
+--color-calendarItemText: #fff;
+--color-calendarItemBackground: #243b53;
+--color-calendarSelectedBackground: #0072b2;
+
+--color-buttonBareBackgroundHover: rgba(200, 200, 200, .2);
+--color-buttonBareBackground: transparent;
+--color-buttonBareText: #d9e2ec;
+--color-buttonBareTextHover: #d9e2ec;
+--color-buttonBareBackgroundActive: rgba(200, 200, 200, .2);
+--color-buttonBareDisabledText: #d9e2ec;
+--color-buttonBareDisabledBackground: transparent;
+
+--color-warningText: #f0e442;
+--color-warningTextDark: #f0e442;
+--color-warningBackground: #68622b;
+--color-errorText: #ff6f00; 
+--color-errorTextDarker: #ff6f00;
+--color-errorBackground: #392a2a;
+--color-noticeText: #00cc96;
+--color-noticeBackgroundLight: #1d352a;
+--color-noticeTextDark: #1affc2;
+--color-noticeBackground: #1d352a;
+
+--color-noticeBackgroundDark: #27ab83;
+--color-noticeTextLight: #1affc2;
+--color-noticeTextMenu: #1affc2;
+--color-noticeBorder: #0c6b58;
+--color-warningTextLight: #f0e442;
+--color-warningBorder: #f0e442;
+--color-errorTextDark: #ff6f00;
+--color-errorTextMenu: #ff9b9b;
+--color-errorBorder: #ff6f00;
+
+--color-upcomingText: hsl(303, 61%, 93%); 
+--color-upcomingBorder: #8e258a;
+--color-upcomingBackground: #a92da3;
+
+--color-formInputBorder: #838383;
+--color-formInputBorderSelected: #e69f00;
+--color-formInputShadowSelected: #a17112;
+--color-formInputText: #d8d8d8;
+--color-formInputBackground: #333333;
+--color-formInputBackgroundSelected: #333333;
+--color-formInputBackgroundSelection: #0072b2;
+--color-formInputTextHighlight: #f0e442;
+
+--color-formLabelText: #e69f00;
+--color-formLabelBackground: #034388;
+--color-formInputTextReadOnlySelection: #243b53;
+
+--color-formInputTextSelected: #000000;
+--color-formInputTextPlaceholder: #d9e2ec;
+--color-formInputTextPlaceholderSelected: #e8ecf0;
+--color-formInputTextSelection: #243b53;
+--color-checkboxText: #fff;
+--color-checkboxBackgroundSelected: #000;
+--color-checkboxBorderSelected: #434343;
+--color-checkboxShadowSelected: #000;
+--color-checkboxToggleBackground: #5d5d5d;
+--color-checkboxToggleBackgroundSelected: #e69f00;
+--color-checkboxToggleDisabled: #747c8b;
+
+--color-pillTextHighlighted: #d9e2ec;
+--color-pillBackground: #00304d;
+--color-pillBackgroundLight: #333333;
+--color-pillText: #a4d5e9;
+
+--color-pillBorder: #e69f00;
+--color-pillBorderDark: #334e68;
+--color-pillBackgroundSelected: #7a0ecc;
+--color-pillTextSelected: #d9e2ec;
+--color-pillBorderSelected: #e69f00;
+--color-pillTextSubdued: #627d98;
+
+--color-reportsRed: #cc79a7;
+--color-reportsBlue: #56b4e9;
+--color-reportsGreen: #009e73;
+--color-reportsGray: #747c8b;
+--color-reportsLabel: #d9e2ec;
+--color-reportsInnerLabel: #243b53;
+
+--color-chartQual1: #eeb910;  
+--color-chartQual2: #ff4195;  
+--color-chartQual3: #3bd3d4;  
+--color-chartQual4: #476300;  
+--color-chartQual5: #99beff;  
+--color-chartQual6: #bd512a;  
+--color-chartQual7: #002e8b;  
+--color-chartQual8: #ff8036;  
+--color-chartQual9: #a300c3;  
+
+--color-noteTagBackground: #690cb0;
+--color-noteTagBackgroundHover: #8719e0;
+--color-noteTagDefault: #690cb0;
+--color-noteTagText: #f2ebfe;
+
+--color-budgetOtherMonth: #393939;
+--color-budgetCurrentMonth: #333333;
+--color-budgetHeaderOtherMonth: #434343;
+--color-budgetHeaderCurrentMonth: #434343;
+
+--color-floatingActionBarBackground: #580a94;
+--color-floatingActionBarBorder: #580a94;
+--color-floatingActionBarText: #d9e2ec;
+
+--color-tooltipText: #d9e2ec;
+--color-tooltipBackground: #333333;
+--color-tooltipBorder: #333333;
+
+--color-calendarCellBackground: #102a43;
+
+--color-mobileHeaderBackground: #393939;
+--color-mobileHeaderText: #d9e2ec;
+--color-mobileHeaderTextSubdued: #bdc5cf;
+--color-mobileHeaderTextHover: rgba(200, 200, 200, .15);
+--color-mobilePageBackground: #222222;
+--color-mobileNavBackground: #393939;
+--color-mobileNavItem: #d9e2ec;
+--color-mobileNavItemSelected: #d9e2ec;
+--color-mobileAccountShadow: #334e68;
+--color-mobileAccountText: #d9e2ec;
+--color-mobileTransactionSelected: #d9e2ec;
+
+--color-numberPositive: #1affc2;
+--color-numberNegative: #ff6f00;
+--color-numberNeutral: #627d98;
+--color-budgetNumberNegative: #ff6f00; /* numberNegative; */
+--color-budgetNumberZero: hsl(0,0%,40%); /* tableTextSubdued; */
+--color-budgetNumberNeutral: #d9e2ec; /* pageText; */
+--color-budgetNumberPositive: #1affc2; /* budgetNumberNeutral; */
+--color-templateNumberFunded: #1affc2; /* numberPositive; */
+--color-templateNumberUnderFunded: #f0e442;
+
+--color-reportsNumberNegative: #ff6f00; /* reportsRed; */
+--color-reportsNumberNeutral: #d9e2ec; /* pageText; */
+--color-reportsNumberPositive: #3ebd93; /* reportsGreen; */
+
+--color-toBudgetPositive: #1affc2;
+--color-toBudgetNegative: #ff6f00;
+--color-toBudgetZero: #1affc2;
+
+
+}
+
+/* --- OMV AUTOMATED MAPPING --- */
+:root, .omv-dark-theme {
+  --theme-primary: var(--color-buttonPrimaryBackground, var(--color-sidebarBackground, #5dacdf));
+}
+
+body, .omv-dark-theme, .mat-app-background, .mat-typography {
+  background-color: var(--color-pageBackground) !important;
+  --mat-background-color-body: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer-container, .omv-dark-theme .mat-drawer-container {
+  background-color: var(--color-pageBackground) !important;
+  color: var(--color-pageText) !important;
+}
+
+.mat-drawer, .omv-dark-theme .mat-drawer {
+  background-color: var(--color-sidebarBackground) !important;
+  color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+/* Navbar / Sidebar text colors */
+.mat-drawer .mat-list-item,
+.omv-dark-theme .mat-drawer .mat-list-item,
+.mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.omv-dark-theme .mat-drawer .mat-list-item .mdc-list-item__primary-text,
+.mat-drawer a, .omv-dark-theme .mat-drawer a {
+    color: var(--color-sidebarItemText, var(--color-pageText, #000)) !important;
+}
+
+.mat-card, .omv-dark-theme .mat-card {
+  background-color: var(--color-cardBackground, var(--color-pageBackground)) !important;
+  color: var(--color-pageText) !important;
+}
+
+/* Datatable Text */
+.ngx-datatable, .omv-dark-theme .ngx-datatable,
+.ngx-datatable .datatable-body-cell, .omv-dark-theme .ngx-datatable .datatable-body-cell,
+.ngx-datatable .datatable-header-cell, .omv-dark-theme .ngx-datatable .datatable-header-cell {
+  color: var(--color-tableText, var(--color-pageText)) !important;
+}
