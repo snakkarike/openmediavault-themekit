@@ -28,7 +28,7 @@ To install the plugin on your OpenMediaVault server, download the latest release
 
 \`\`\`bash
 
-# Always grabs the newest release, no version number to remember or ~~update~~
+# Always grabs the newest release, no version number to remember or update
 
 wget https://github.com/snakkarike/openmediavault-themekit/releases/latest/download/openmediavault-themekit_all.deb
 
