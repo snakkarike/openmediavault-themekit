@@ -142,5 +142,12 @@ data:
         name: accentSpecialPages
         label: _("Use accent color for Login, Authentication, Shutdown and Standby pages")
         value: false
+        modifiers:
+          - type: hidden
+            constraint:
+              operator: eq
+              arg0:
+                prop: theme
+              arg1: none
     buttons:
       - template: submit
