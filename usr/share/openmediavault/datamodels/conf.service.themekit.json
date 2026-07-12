@@ -10,6 +10,7 @@
         "theme": {
             "type": "string",
             "enum": [
+                "none",
                 "default",
                 "alucard",
                 "black-gold-theme",
