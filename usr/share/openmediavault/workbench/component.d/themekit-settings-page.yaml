@@ -11,6 +11,8 @@ data:
       post:
         method: set
     fields:
+      - type: divider
+        title: _("Themes")
       - type: select
         name: theme
         label: _("Theme")

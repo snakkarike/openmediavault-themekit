@@ -12,10 +12,10 @@ data:
         method: set
     fields:
       - type: divider
-        title: _("Enter any custom CSS below. These styles will be applied with the highest priority and will override any standard theme styling.")
+        title: _("Custom CSS")
       - type: textarea
         name: customCss
-        label: _("Custom CSS")
+        label: _("Enter any custom CSS below. These styles will be applied with the highest priority and will override any standard theme styling.")
         hint: '_("e.g. body { background-color: #000 !important; }")'
         rows: 20
         modifiers:

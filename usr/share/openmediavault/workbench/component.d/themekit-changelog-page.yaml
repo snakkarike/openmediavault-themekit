@@ -9,6 +9,8 @@ data:
       get:
         method: get
     fields:
+      - type: divider
+        title: _("Changelog")
       - type: textarea
         name: changelog_view
         label: _("Release History")

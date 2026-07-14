@@ -11,6 +11,8 @@ data:
       post:
         method: set
     fields:
+      - type: divider
+        title: _("Fonts")
       - type: select
         name: fontCategory
         label: _("Font Category")
@@ -7940,4 +7942,3 @@ data:
           max: 24
     buttons:
       - template: submit
-
