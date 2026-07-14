@@ -4,78 +4,86 @@ import urllib.request
 import re
 import os
 import shutil
+import ssl
+
+def log(msg):
+    # Log to a file so the user can debug if needed
+    with open("/tmp/themekit_font_download.log", "a") as f:
+        f.write(msg + "\n")
 
 def main():
     if len(sys.argv) < 2:
+        log("No arguments provided.")
         return
         
-    font_name = sys.argv[1].strip()
+    # Strip any extra quotes that Salt might have passed
+    font_name = sys.argv[1].strip(' "\'')
     active_css = "/var/www/openmediavault/assets/theme-font.css"
     fonts_dir = "/var/www/openmediavault/assets/fonts"
     
     if not font_name or font_name.lower() == "none":
-        # If no font is selected, we clear the local font css to avoid loading old fonts
-        # We write an empty file instead of deleting it to prevent browser 404s
         with open(active_css, "w") as f:
             f.write("")
+        log("Font cleared.")
         return
 
-    # Ensure fonts directory exists
     os.makedirs(fonts_dir, exist_ok=True)
     
-    # Generate a cache filename for this font
     font_id = font_name.lower().replace(' ', '_')
     cached_css = os.path.join(fonts_dir, f"{font_id}.css")
     
     if os.path.exists(cached_css):
-        # We already downloaded this font previously, just use the cached CSS!
         shutil.copy2(cached_css, active_css)
+        log(f"Used cached CSS for {font_name}.")
         return
 
-    font_url = f"https://fonts.googleapis.com/css?family={font_name.replace(' ', '+')}:300,400,500,700&display=swap"
+    # Use a simpler query that works for all fonts without triggering 400 Bad Request for unsupported weights
+    font_url = f"https://fonts.googleapis.com/css?family={font_name.replace(' ', '+')}&display=swap"
+    log(f"Fetching CSS from: {font_url}")
     
-    # Spoof a modern browser to get smaller WOFF2 fonts
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
     }
     
     req = urllib.request.Request(font_url, headers=headers)
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+
     try:
-        response = urllib.request.urlopen(req)
+        response = urllib.request.urlopen(req, context=ctx)
         css_content = response.read().decode('utf-8')
     except Exception as e:
-        print(f"Failed to fetch Google Fonts CSS: {e}")
+        log(f"Failed to fetch Google Fonts CSS: {e}")
         return
 
-    # Find all font URLs in the CSS
-    urls = re.findall(r"url\((https://[^)]+)\)", css_content)
+    # Regex to handle potential quotes in url()
+    urls = re.findall(r"url\(['\"]?(https://[^)'\"]+)['\"]?\)", css_content)
+    log(f"Found {len(urls)} font files to download.")
     
     for url in urls:
-        # Generate a unique local filename
         filename = url.split('/')[-1]
         local_path = os.path.join(fonts_dir, filename)
         
-        # Download the font file if it doesn't exist
         if not os.path.exists(local_path):
             try:
                 font_req = urllib.request.Request(url, headers=headers)
-                font_data = urllib.request.urlopen(font_req).read()
+                font_data = urllib.request.urlopen(font_req, context=ctx).read()
                 with open(local_path, 'wb') as f:
                     f.write(font_data)
+                log(f"Downloaded {filename}")
             except Exception as e:
-                print(f"Failed to download font file {url}: {e}")
+                log(f"Failed to download font file {url}: {e}")
                 continue
                 
-        # The active CSS will live in assets/theme-font.css
-        # So the relative path to the font file is fonts/filename
+        # Handle original URL which might not have quotes in the raw CSS
         css_content = css_content.replace(url, f"fonts/{filename}")
 
-    # Save to the cache
     with open(cached_css, "w") as f:
         f.write(css_content)
         
-    # Copy to the active CSS file
     shutil.copy2(cached_css, active_css)
+    log(f"Successfully activated font {font_name}")
 
 if __name__ == "__main__":
     main()
