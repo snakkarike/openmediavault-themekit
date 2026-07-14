@@ -4,6 +4,14 @@ data:
   name: themekit-about-page
   type: formPage
   config:
+    request:
+      service: ThemeKit
+      get:
+        method: get
     fields:
       - type: paragraph
         text: _("Changelog and details will be added here.")
+    buttons:
+      - template: submit
+        modifiers:
+          - type: hidden
