@@ -46,20 +46,61 @@
         },
         "accent": {
             "type": "string",
-            "enum": ["default", "slate", "gray", "zinc", "neutral", "stone", "red", "orange", "amber", "yellow", "lime", "green", "emerald", "teal", "cyan", "sky", "blue", "indigo", "violet", "purple", "fuchsia", "pink", "rose"],
+            "enum": [
+                "default",
+                "slate",
+                "gray",
+                "zinc",
+                "neutral",
+                "stone",
+                "red",
+                "orange",
+                "amber",
+                "yellow",
+                "lime",
+                "green",
+                "emerald",
+                "teal",
+                "cyan",
+                "sky",
+                "blue",
+                "indigo",
+                "violet",
+                "purple",
+                "fuchsia",
+                "pink",
+                "rose"
+            ],
             "default": "default"
         },
         "accentSpecialPages": {
             "type": "boolean",
             "default": false
         },
-        "customFont": {
-            "type": "string",
-            "default": ""
-        },
         "baseFontSize": {
             "type": "integer",
             "default": 14
+        },
+        "fontCategory": {
+            "type": "string"
+        },
+        "customFont_all": {
+            "type": "string"
+        },
+        "customFont_sans_serif": {
+            "type": "string"
+        },
+        "customFont_serif": {
+            "type": "string"
+        },
+        "customFont_display": {
+            "type": "string"
+        },
+        "customFont_handwriting": {
+            "type": "string"
+        },
+        "customFont_monospace": {
+            "type": "string"
         }
     }
 }
