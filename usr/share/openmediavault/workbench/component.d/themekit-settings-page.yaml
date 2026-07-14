@@ -189,8 +189,8 @@ data:
       - type: numberInput
         name: baseFontSize
         label: _("Base Font Size (px)")
-        hint: _("Default is usually 14. Set to 0 to use system default.")
-        value: 14
+        hint: _("Default is usually 16. Set to 0 to use system default.")
+        value: 16
         validators:
           min: 0
           max: 30
