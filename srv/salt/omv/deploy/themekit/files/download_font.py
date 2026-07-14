@@ -13,10 +13,11 @@ def main():
     active_css = "/var/www/openmediavault/assets/theme-font.css"
     fonts_dir = "/var/www/openmediavault/assets/fonts"
     
-    if not font_name:
+    if not font_name or font_name.lower() == "none":
         # If no font is selected, we clear the local font css to avoid loading old fonts
-        if os.path.exists(active_css):
-            os.remove(active_css)
+        # We write an empty file instead of deleting it to prevent browser 404s
+        with open(active_css, "w") as f:
+            f.write("")
         return
 
     # Ensure fonts directory exists
