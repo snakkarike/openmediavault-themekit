@@ -16,7 +16,7 @@ data:
         label: _("Release History")
         rows: 50
         value: |
-          openmediavault-themekit (1.0.4) stable; urgency=medium
+          openmediavault-themekit (1.0.4)
 
             * SECURITY: Fixed severe shell injection vulnerability in `download_font.py` by passing dynamic font names via environment variables (`THEMEKIT_ACTIVE_FONT`) instead of shell arguments from Salt.
             * SECURITY: Enforced strict TLS verification for Google Fonts API and font file downloads to prevent MITM attacks.
@@ -32,9 +32,7 @@ data:
             * Corrected YAML syntax issues in form definitions preventing successful workbench compilation (omv-mkworkbench).
             * Adjusted base font size validation to allow a more reasonable range (10px to 24px).
 
-           -- Saurabh Nakkarike <gradelabsin@gmail.com>  Tue, 14 Jul 2026 16:50:00 +0530
-
-          openmediavault-themekit (1.0.3) stable; urgency=medium
+          openmediavault-themekit (1.0.3)
 
             * Restructured Settings page into distinct tabs: Settings, Typography, Custom CSS, Changelog, and Update.
             * Added comprehensive Google Fonts integration (categorized by font style) and base font size configuration.
@@ -43,26 +41,20 @@ data:
             * Added missing icons for navigation tabs.
             * Fixed font overriding by aggressively targeting OMV typography classes.
 
-           -- Saurabh Nakkarike <gradelabsin@gmail.com>  Tue, 14 Jul 2026 14:35:00 +0530
-
-          openmediavault-themekit (1.0.2) stable; urgency=medium
+          openmediavault-themekit (1.0.2)
 
             * Added "None (Native OMV)" theme option to disable custom theming entirely.
             * Restored topbar blur on special pages (Login, Authentication, Shutdown, Standby).
             * Styled topbar on special pages with a darker shade of the selected accent color.
 
-           -- Saurabh Nakkarike <gradelabsin@gmail.com>  Sun, 12 Jul 2026 16:10:00 +0530
-
-          openmediavault-themekit (1.0.1) stable; urgency=medium
+          openmediavault-themekit (1.0.1)
 
             * Replaced global apt hook with precise dpkg trigger on index.html updates.
             * Properly seed theme key on fresh installation.
             * Tightened error handling by halting installation if schema registration fails.
             * Cleaned up remaining metadata and documentation placeholders.
 
-           -- Saurabh Nakkarike <gradelabsin@gmail.com>  Sat, 11 Jul 2026 12:45:00 +0530
-
-          openmediavault-themekit (1.0.0) stable; urgency=medium
+          openmediavault-themekit (1.0.0)
 
             * Initial stable release of OpenMediaVault Themekit.
             * Added extensive collection of pre-configured themes (Catppuccin, Rose Pine, Gruvbox, Nord, Dracula, etc.).
@@ -72,8 +64,6 @@ data:
             * Corrected active list item backgrounds and icon color inheritances for seamless integration with Angular Material UI.
             * Included Salt deploy modules and APT hooks to guarantee UI state persistence across system updates.
             * Developed Settings page for effortlessly toggling themes and accents.
-
-           -- Saurabh Nakkarike <gradelabsin@gmail.com>  Sat, 11 Jul 2026 00:45:00 +0530
 
         modifiers:
           - type: disabled
