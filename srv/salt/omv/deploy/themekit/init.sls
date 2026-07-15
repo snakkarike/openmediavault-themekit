@@ -16,12 +16,12 @@ theme_custom_css:
     - mode: '0644'
     - makedirs: True
     - context:
-        theme: {{ config.theme }}
-        accent: {{ config.accent }}
-        accentSpecialPages: {{ config.accentSpecialPages }}
-        customFont: {{ active_font }}
-        baseFontSize: {{ config.baseFontSize }}
-        enableTypography: {{ config.enableTypography | default(False) }}
+        theme: {{ config.theme | json }}
+        accent: {{ config.accent | json }}
+        accentSpecialPages: {{ config.accentSpecialPages | json }}
+        customFont: {{ active_font | json }}
+        baseFontSize: {{ config.baseFontSize | json }}
+        enableTypography: {{ config.enableTypography | default(False) | json }}
 
 user_custom_css:
   file.managed:
@@ -34,7 +34,7 @@ user_custom_css:
     - makedirs: True
     - context:
         customCss: {{ config.customCss | default('') | json }}
-        enableCustomCss: {{ config.enableCustomCss | default(False) }}
+        enableCustomCss: {{ config.enableCustomCss | default(False) | json }}
 
 download_google_font:
   cmd.script:
