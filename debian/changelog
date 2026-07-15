@@ -2,10 +2,18 @@ openmediavault-themekit (1.0.7) stable; urgency=medium
 
   * Replaced background `exec(omv-salt ...)` call in the RPC `set` method with a proper omv-engined module listener following the standard OpenMediaVault plugin architecture.
   * Added `engined/module/themekit.inc` implementing `ServiceAbstract` and `IListener`, which marks the module dirty via `setDirty()` on configuration changes.
-  * Added `$this->notify(OMV_NOTIFY_MODIFY, ...)` dispatch in `ThemeKit::set()` so the engine receives the configuration change event and shows the Apply Changes banner in the web UI.
+  * Added `Dispatcher::getInstance()->notify(OMV_NOTIFY_MODIFY, ...)` in `ThemeKit::set()` so the engine receives configuration change events and shows the Apply Changes banner in the web UI.
+  * Fixed RPC crash: replaced non-existent `$this->notify()` call with the correct `Dispatcher::getInstance()->notify()` singleton pattern.
   * CSS is now only regenerated when the user explicitly clicks Apply Changes, consistent with how all other OMV plugins behave.
+  * Optimized RPC `set` method: cache `getAssoc()` result once and reuse it for both `notify()` and the return value instead of calling it three times.
+  * Fixed variable name collision in `download_font.py`: inner binary download variable `font_data` renamed to `font_binary` to avoid shadowing the outer DB lookup variable.
+  * Added `| string` filter to `user-custom.css.j2` to prevent Jinja re-evaluation of user-provided CSS content containing `{{ }}` syntax.
+  * Added log rotation to `download_font.py`: log file is rotated at 500 KB to prevent unbounded growth.
+  * Added explicit `return` after `finish()` calls at early-exit points in `download_font.py` to make control flow unambiguous.
+  * Fixed formatting in `postinst` and `postrm` scripts.
+  * Updated `debian/control` description to mention typography and custom CSS features; fixed line wrapping per Debian policy.
 
- -- Saurabh Nakkarike <gradelabsin@gmail.com>  Tue, 15 Jul 2026 19:15:00 +0530
+ -- Saurabh Nakkarike <gradelabsin@gmail.com>  Tue, 15 Jul 2026 19:46:00 +0530
 
 openmediavault-themekit (1.0.6) stable; urgency=medium
 
