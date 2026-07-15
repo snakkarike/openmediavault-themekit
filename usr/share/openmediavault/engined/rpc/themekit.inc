@@ -60,7 +60,7 @@ class OMVRpcServiceThemeKit extends \OMV\Rpc\ServiceAbstract
         // We run this in the background so it doesn't block the RPC response!
         // We also sleep for 2 seconds to ensure omv-engined has finished writing the new config to disk.
         // flock ensures concurrent saves (rapid tab clicking) don't corrupt index.html
-        exec("(sleep 2; flock -w 10 /var/run/omv-themekit.lock omv-salt deploy run themekit) > /dev/null 2>&1 &");
+        exec("(sleep 2; flock /var/run/omv-themekit.lock omv-salt deploy run themekit) > /dev/null 2>&1 &");
 
         return $object->getAssoc();
     }

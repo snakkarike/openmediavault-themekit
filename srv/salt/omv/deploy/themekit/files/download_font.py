@@ -14,13 +14,14 @@ def log(msg):
     with open(f"{log_dir}/font_download.log", "a") as f:
         f.write(msg + "\n")
 
-def finish(changed, comment):
+def finish(changed, comment, result=True):
     log(comment)
     print(json.dumps({
         "changed": changed,
-        "comment": comment
+        "comment": comment,
+        "result": result
     }))
-    sys.exit(0)
+    sys.exit(0 if result else 1)
 
 def write_if_changed(filepath, content):
     if os.path.exists(filepath):
@@ -67,7 +68,7 @@ def main():
         font_data = fonts_db.get(font_name)
 
     if not font_data:
-        finish(False, f"Error: Font '{font_name}' not found in database.")
+        finish(False, f"Error: Font '{font_name}' not found in database.", result=False)
 
     os.makedirs(fonts_dir, exist_ok=True)
     
@@ -95,7 +96,7 @@ def main():
         response = urllib.request.urlopen(req, context=ctx)
         css_content = response.read().decode('utf-8')
     except Exception as e:
-        finish(False, f"Failed to fetch Google Fonts CSS: {e}")
+        finish(False, f"Failed to fetch Google Fonts CSS: {e}", result=False)
 
     urls = re.findall(r"url\(['\"]?(https://[^)'\"]+)['\"]?\)", css_content)
     log(f"Found {len(urls)} font files to download.")
@@ -128,7 +129,7 @@ def main():
         f.write(css_content)
         
     changed = copy_if_changed(cached_css, active_css)
-    finish(True, f"Successfully downloaded and activated font {font_name}")
+    finish(changed, f"Successfully downloaded and activated font {font_name}")
 
 if __name__ == "__main__":
     main()

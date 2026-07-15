@@ -73,6 +73,13 @@ patch_index_html:
         sed -i -e 's#<link rel="stylesheet" href="assets/theme-custom.css[^>]*>##g' {{ webroot }}/index.html &&
         sed -i -e 's#<link rel="stylesheet" href="assets/user-custom.css[^>]*>##g' {{ webroot }}/index.html &&
         sed -i "s#</head>#<link rel=\"stylesheet\" href=\"assets/theme-font.css?v=${FONT_MD5}\">\n<link rel=\"stylesheet\" href=\"assets/theme-custom.css?v=${CUSTOM_MD5}\">\n<link rel=\"stylesheet\" href=\"assets/user-custom.css?v=${USER_MD5}\">\n</head>#" {{ webroot }}/index.html
+    - unless: >
+        FONT_MD5=$(md5sum {{ webroot }}/assets/theme-font.css | cut -d' ' -f1) &&
+        CUSTOM_MD5=$(md5sum {{ webroot }}/assets/theme-custom.css | cut -d' ' -f1) &&
+        USER_MD5=$(md5sum {{ webroot }}/assets/user-custom.css | cut -d' ' -f1) &&
+        grep -q "theme-font.css?v=${FONT_MD5}" {{ webroot }}/index.html &&
+        grep -q "theme-custom.css?v=${CUSTOM_MD5}" {{ webroot }}/index.html &&
+        grep -q "user-custom.css?v=${USER_MD5}" {{ webroot }}/index.html
     - require:
         - cmd: download_google_font
         - file: theme_custom_css
