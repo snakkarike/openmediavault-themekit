@@ -8,7 +8,6 @@
  */
 
 use OMV\Config\Database;
-use OMV\Engine\Notify\Dispatcher;
 
 class OMVRpcServiceThemeKit extends \OMV\Rpc\ServiceAbstract
 {
@@ -58,12 +57,10 @@ class OMVRpcServiceThemeKit extends \OMV\Rpc\ServiceAbstract
 
         $data = $object->getAssoc();
 
-        // Notify listeners so the engined module marks themekit as dirty
-        // and the Apply Changes banner appears in the UI.
-        Dispatcher::getInstance()->notify(
-            OMV_NOTIFY_MODIFY,
-            "org.openmediavault.conf.service.themekit",
-            $data);
+        // Mark this module dirty so omv-engined shows the Apply Changes
+        // banner. The engine will call deploy() -> omv-salt deploy run themekit
+        // when the user clicks Apply.
+        $this->setModuleDirty('themekit');
 
         return $data;
     }
