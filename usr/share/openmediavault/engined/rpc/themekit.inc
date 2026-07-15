@@ -32,15 +32,6 @@ class OMVRpcServiceThemeKit extends \OMV\Rpc\ServiceAbstract
         $object = $db->get("conf.service.themekit");
         $assoc = $object->getAssoc();
         
-        // Fallback: If customCss is empty in database, try to load existing file contents
-        if (empty($assoc['customCss'])) {
-            $css_file = "/var/www/openmediavault/assets/user-custom.css";
-            if (file_exists($css_file)) {
-                $content = file_get_contents($css_file);
-                $content = str_replace("/* Custom CSS from ThemeKit */\n", "", $content);
-                $assoc['customCss'] = trim($content);
-            }
-        }
         
         return $assoc;
     }
@@ -51,7 +42,6 @@ class OMVRpcServiceThemeKit extends \OMV\Rpc\ServiceAbstract
             "role" => OMV_ROLE_ADMINISTRATOR
         ]);
 
-        syslog(LOG_INFO, "ThemeKit.set called with params: " . json_encode($params));
 
 
         $db = Database::getInstance();
@@ -64,7 +54,6 @@ class OMVRpcServiceThemeKit extends \OMV\Rpc\ServiceAbstract
         
         $object->setAssoc($merged);
         $db->set($object);
-        syslog(LOG_INFO, "ThemeKit object after setAssoc: " . json_encode($object->getAssoc()));
 
         // Re-render CSS via the salt state for this plugin.
         // We run this in the background so it doesn't block the RPC response!

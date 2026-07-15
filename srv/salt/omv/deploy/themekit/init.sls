@@ -1,20 +1,7 @@
 {% set config = salt['omv_conf.get']('conf.service.themekit') %}
 {% set webroot = '/var/www/openmediavault' %}
 
-{% set cat = config.fontCategory | default('all') %}
-{% if cat == 'sans-serif' %}
-{% set active_font = config.customFont_sans_serif | default('') %}
-{% elif cat == 'serif' %}
-{% set active_font = config.customFont_serif | default('') %}
-{% elif cat == 'display' %}
-{% set active_font = config.customFont_display | default('') %}
-{% elif cat == 'handwriting' %}
-{% set active_font = config.customFont_handwriting | default('') %}
-{% elif cat == 'monospace' %}
-{% set active_font = config.customFont_monospace | default('') %}
-{% else %}
-{% set active_font = config.customFont_all | default('') %}
-{% endif %}
+{% set active_font = config.customFont | default('') %}
 
 # --- CSS override, lives in assets/ which is not hash-named and is safe
 # to leave in place across OMV rebuilds. -------------------------------
@@ -66,9 +53,8 @@ patch_index_html:
   cmd.run:
     - name: >
         sed -i -e 's#<link rel="stylesheet" href="assets/theme-custom.css[^>]*>##g' {{ webroot }}/index.html &&
-        sed -i -e 's#<link rel="stylesheet" href="assets/theme-font.css[^>]*>##g' {{ webroot }}/index.html &&
         sed -i -e 's#<link rel="stylesheet" href="assets/user-custom.css[^>]*>##g' {{ webroot }}/index.html &&
-        sed -i 's#</head>#<link rel="stylesheet" href="assets/theme-font.css?v='$(date +%s)'">\n<link rel="stylesheet" href="assets/theme-custom.css?v='$(date +%s)'">\n<link rel="stylesheet" href="assets/user-custom.css?v='$(date +%s)'">\n</head>#' {{ webroot }}/index.html
+        sed -i 's#</head>#<link rel="stylesheet" href="assets/theme-custom.css?v='$(date +%s)'">\n<link rel="stylesheet" href="assets/user-custom.css?v='$(date +%s)'">\n</head>#' {{ webroot }}/index.html
     - require:
         - file: theme_custom_css
         - file: user_custom_css
