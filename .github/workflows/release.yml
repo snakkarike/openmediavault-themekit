@@ -55,11 +55,19 @@ jobs:
 
       - name: Publish GitHub release
         if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
-        with:
-          # Assumes the tag name is v<version>, e.g. v1.0.7
-          name: "ThemeKit ${{ github.ref_name }}"
-          generate_release_notes: true
-          files: |
-            dist/openmediavault-themekit_${{ steps.stage.outputs.version }}_all.deb
-            dist/openmediavault-themekit_all.deb
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Check if the release already exists
+          if gh release view ${{ github.ref_name }} >/dev/null 2>&1; then
+            echo "Release ${{ github.ref_name }} already exists. Updating files only to preserve release notes..."
+          else
+            echo "Creating new release ${{ github.ref_name }}..."
+            gh release create ${{ github.ref_name }} --title "ThemeKit ${{ github.ref_name }}" --generate-notes
+          fi
+          
+          # Upload files, overwriting existing ones if the tag was moved
+          gh release upload ${{ github.ref_name }} \
+            dist/openmediavault-themekit_${{ steps.stage.outputs.version }}_all.deb \
+            dist/openmediavault-themekit_all.deb \
+            --clobber

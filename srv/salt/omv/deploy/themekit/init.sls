@@ -46,7 +46,9 @@ clear_old_logos:
 {% if branding_url %}
 download_custom_logo:
   cmd.run:
-    - name: wget -q --timeout=10 -O {{ webroot }}/assets/custom_logo.{{ branding_ext }} "{{ branding_url }}" || true
+    - name: 'wget -q --timeout=10 -O "{{ webroot }}/assets/custom_logo.{{ branding_ext }}" "$THEMEKIT_LOGO_URL" || true'
+    - env:
+      - THEMEKIT_LOGO_URL: {{ branding_url | json }}
     - require:
       - cmd: clear_old_logos
 {% endif %}
@@ -54,7 +56,9 @@ download_custom_logo:
 {% if branding_url_mobile %}
 download_custom_logo_mobile:
   cmd.run:
-    - name: wget -q --timeout=10 -O {{ webroot }}/assets/custom_logo_mobile.{{ branding_ext_mobile }} "{{ branding_url_mobile }}" || true
+    - name: 'wget -q --timeout=10 -O "{{ webroot }}/assets/custom_logo_mobile.{{ branding_ext_mobile }}" "$THEMEKIT_LOGO_URL_MOBILE" || true'
+    - env:
+      - THEMEKIT_LOGO_URL_MOBILE: {{ branding_url_mobile | json }}
     - require:
       - cmd: clear_old_logos
 {% endif %}

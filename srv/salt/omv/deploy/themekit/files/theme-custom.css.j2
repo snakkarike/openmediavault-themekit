@@ -857,7 +857,7 @@ omv-login-page .topbar .logo {
 .omv-navigation-bar .header .logo::after,
 .topbar .logo::after,
 omv-login-page .topbar .logo::after {
-    content: "{{ brandingText }}";
+    content: {{ brandingText | json }};
     font-size: 1.25rem;
     font-weight: 500;
     color: var(--omv-color-white, #fff);
@@ -877,7 +877,7 @@ omv-login-page .topbar .logo {
 {% if brandingType == 'text' %}
     .topbar .logo::after,
     omv-login-page .topbar .logo::after {
-        content: "{{ brandingTextMobile }}";
+        content: {{ brandingTextMobile | json }};
     }
 {% elif brandingType == 'image' and brandingImageUrlMobile != '' %}
     .topbar .logo,
