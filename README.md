@@ -45,7 +45,30 @@ Settings are stored in OMV's config database, and a Salt state renders them into
 
 ## Installation
 
-To install the plugin on your OpenMediaVault server, download the latest release and install it via `dpkg`:
+You can install the plugin either via the APT repository (recommended for automatic updates) or by manually downloading the `.deb` file.
+
+### Method 1: APT Repository (Recommended)
+
+First, add the repository and then install via `apt`:
+
+```bash
+# Add the GPG key
+sudo curl -fsSL https://snakkarike.github.io/openmediavault-themekit/themekit-archive-keyring.gpg \
+  -o /usr/share/keyrings/themekit-archive-keyring.gpg
+
+# Add the repository
+echo "deb [signed-by=/usr/share/keyrings/themekit-archive-keyring.gpg] \
+https://snakkarike.github.io/openmediavault-themekit stable main" | \
+  sudo tee /etc/apt/sources.list.d/themekit.list
+
+# Update and install
+sudo apt update
+sudo apt install openmediavault-themekit
+```
+
+### Method 2: Manual Download (.deb)
+
+Download the latest release and install it via `dpkg`:
 
 ```bash
 # Always grabs the newest release, no version number to remember or update
@@ -55,7 +78,8 @@ wget https://github.com/snakkarike/openmediavault-themekit/releases/latest/downl
 sudo dpkg -i openmediavault-themekit_all.deb
 sudo apt-get install -f -y
 ```
-Once installed, refresh your browser (`Ctrl+Shift+R`) and look for "Theme Kit" under System in the OMV sidebar.
+
+Once installed using either method, refresh your browser (`Ctrl+Shift+R`) and look for "Theme Kit" under System in the OMV sidebar.
 
 ## Layout
 
