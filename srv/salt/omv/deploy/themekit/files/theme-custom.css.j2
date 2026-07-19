@@ -857,11 +857,12 @@ omv-login-page .topbar .logo {
 .omv-navigation-bar .header .logo::after,
 .topbar .logo::after,
 omv-login-page .topbar .logo::after {
-    content: {{ brandingText | json }};
-    font-size: 1.25rem;
-    font-weight: 500;
+    content: {{ brandingText[:14] | json }};
+    font-size: 2rem;
+    font-weight: 700;
     color: var(--omv-color-white, #fff);
     white-space: nowrap;
+    font-family: var(--theme-font-family) !important;
 }
 {% elif brandingType == 'image' and brandingImageUrl != '' %}
 .omv-navigation-bar .header .logo {
@@ -877,7 +878,7 @@ omv-login-page .topbar .logo {
 {% if brandingType == 'text' %}
     .topbar .logo::after,
     omv-login-page .topbar .logo::after {
-        content: {{ brandingTextMobile | json }};
+        content: {{ brandingTextMobile[:4] | json }};
     }
 {% elif brandingType == 'image' and brandingImageUrlMobile != '' %}
     .topbar .logo,

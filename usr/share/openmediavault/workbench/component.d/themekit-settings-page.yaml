@@ -177,7 +177,10 @@ data:
       - type: textInput
         name: brandingText
         label: _("Custom Text")
+        hint: _("Maximum 14 characters")
         value: "OpenMediaVault"
+        validators:
+          maxLength: 14
         modifiers:
           - type: hidden
             constraint:
@@ -214,7 +217,10 @@ data:
       - type: textInput
         name: brandingTextMobile
         label: _("Custom Text (Mobile)")
+        hint: _("Maximum 4 characters")
         value: "OMV"
+        validators:
+          maxLength: 4
         modifiers:
           - type: hidden
             constraint:
