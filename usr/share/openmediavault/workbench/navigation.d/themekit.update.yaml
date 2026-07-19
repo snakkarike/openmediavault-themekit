@@ -1,8 +1,0 @@
-version: "1.0"
-type: navigation-item
-data:
-  path: 'system.themekit.update'
-  text: _('Update')
-  position: 50
-  icon: 'mdi:update'
-  url: '/system/themekit/update'

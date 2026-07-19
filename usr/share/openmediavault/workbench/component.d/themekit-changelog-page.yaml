@@ -16,6 +16,11 @@ data:
         label: _("Release History")
         rows: 50
         value: |
+          openmediavault-themekit (1.1.1)
+
+            * Removed branding options to preserve the OpenMediaVault logo.
+            * Removed update page and references.
+
           openmediavault-themekit (1.1.0)
 
             * Setup new apt installation system to allow apt upgrades to work properly.

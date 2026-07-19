@@ -1,3 +1,10 @@
+openmediavault-themekit (1.1.1) stable; urgency=medium
+
+  * Removed branding options to preserve the OpenMediaVault logo.
+  * Removed update page and references.
+
+ -- Saurabh Nakkarike <gradelabsin@gmail.com>  Sun, 19 Jul 2026 19:50:37 +0530
+
 openmediavault-themekit (1.1.0) stable; urgency=medium
 
   * Setup new apt installation system to allow apt upgrades to work properly.
