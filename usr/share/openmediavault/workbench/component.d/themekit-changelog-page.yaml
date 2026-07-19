@@ -16,6 +16,10 @@ data:
         label: _("Release History")
         rows: 50
         value: |
+          openmediavault-themekit (1.0.9)
+
+            * Set character limits for custom branding text inputs and fixed font-family application.
+
           openmediavault-themekit (1.0.8)
 
             * Added Custom Branding section to replace the OpenMediaVault logo with custom text or an external image URL.

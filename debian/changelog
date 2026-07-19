@@ -1,3 +1,9 @@
+openmediavault-themekit (1.0.9) stable; urgency=medium
+
+  * Set character limits for custom branding text inputs and fixed font-family application.
+
+ -- Saurabh Nakkarike <gradelabsin@gmail.com>  Sun, 19 Jul 2026 13:18:17 +0530
+
 openmediavault-themekit (1.0.8) stable; urgency=medium
 
   * Added Custom Branding section to replace the OpenMediaVault logo with custom text or an external image URL.
