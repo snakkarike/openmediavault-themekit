@@ -1,14 +1,14 @@
 Package: openmediavault-themekit
-Version: 1.1.1
+Version: 1.1.2
 Architecture: all
 Maintainer: Saurabh Nakkarike <gradelabsin@gmail.com>
-Installed-Size: 2285
+Installed-Size: 2286
 Depends: openmediavault (>= 8.1.1)
-Filename: pool/main/openmediavault-themekit_1.1.1_all.deb
-Size: 218814
-MD5sum: 5069b2ff6a01e462ef691c90c7ae553f
-SHA1: 8f79f9ed36b2df59a814427d5ccb4e1cfc28fe5e
-SHA256: 691aff29485723e2a23c5e290ce2c1d3a7f815bdba951aaa6a602da37f16cc4d
+Filename: pool/main/openmediavault-themekit_1.1.2_all.deb
+Size: 219166
+MD5sum: 993f74f687cc4c01272a439e9c1c2680
+SHA1: bc00dc1c75c598ddfa06007f391776b52eb6db06
+SHA256: aa786d950b600d23e94eb7a84e2dacc8a7f4cb42191e078f62bae56ab6f78713
 Section: net
 Priority: optional
 Homepage: https://github.com/snakkarike/openmediavault-themekit
