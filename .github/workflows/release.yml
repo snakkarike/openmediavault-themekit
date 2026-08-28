@@ -125,12 +125,28 @@ jobs:
           cp "$GITHUB_WORKSPACE/dist/openmediavault-themekit_all.deb" \
              "pool/main/openmediavault-themekit_${{ needs.build-and-release.outputs.version }}_all.deb"
 
+          # Create directories for common architectures to satisfy apt
+          mkdir -p dists/stable/main/binary-amd64 dists/stable/main/binary-arm64 dists/stable/main/binary-armhf
+
           dpkg-scanpackages --arch all pool/main /dev/null > dists/stable/main/binary-all/Packages
           gzip -kf dists/stable/main/binary-all/Packages
 
+          # Create empty Packages files for other architectures
+          touch dists/stable/main/binary-amd64/Packages dists/stable/main/binary-arm64/Packages dists/stable/main/binary-armhf/Packages
+          gzip -kf dists/stable/main/binary-amd64/Packages
+          gzip -kf dists/stable/main/binary-arm64/Packages
+          gzip -kf dists/stable/main/binary-armhf/Packages
+
           cd dists/stable
           rm -f Release InRelease Release.gpg
-          apt-ftparchive release . > Release
+          apt-ftparchive \
+            -o APT::FTPArchive::Release::Origin="ThemeKit" \
+            -o APT::FTPArchive::Release::Label="ThemeKit Repository" \
+            -o APT::FTPArchive::Release::Suite="stable" \
+            -o APT::FTPArchive::Release::Codename="stable" \
+            -o APT::FTPArchive::Release::Architectures="all amd64 arm64 armhf" \
+            -o APT::FTPArchive::Release::Components="main" \
+            release . > Release
           gpg --default-key "${{ secrets.APT_GPG_KEY_EMAIL }}" --clearsign -o InRelease Release
           gpg --default-key "${{ secrets.APT_GPG_KEY_EMAIL }}" -abs -o Release.gpg Release
 

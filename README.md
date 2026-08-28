@@ -57,7 +57,7 @@ sudo curl -fsSL https://snakkarike.github.io/openmediavault-themekit/themekit-ar
   -o /usr/share/keyrings/themekit-archive-keyring.gpg
 
 # Add the repository
-echo "deb [signed-by=/usr/share/keyrings/themekit-archive-keyring.gpg] \
+echo "deb [arch=all signed-by=/usr/share/keyrings/themekit-archive-keyring.gpg] \
 https://snakkarike.github.io/openmediavault-themekit stable main" | \
   sudo tee /etc/apt/sources.list.d/themekit.list
 

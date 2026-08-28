@@ -16,6 +16,11 @@ data:
         label: _("Release History")
         rows: 50
         value: |
+          openmediavault-themekit (1.1.3)
+
+            * Fixed APT repository warnings by adding standard distribution metadata (Suite, Codename, Components, Architectures) to the generated Release file.
+            * Prevented APT 'Skipping configured file' warnings by provisioning empty architecture index files for amd64, arm64, and armhf.
+
           openmediavault-themekit (1.1.2)
 
             * Fixed active row background visibility in datatables for custom themes.
