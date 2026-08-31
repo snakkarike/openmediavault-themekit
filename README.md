@@ -1,5 +1,10 @@
 # openmediavault-themekit
 
+[![GitHub Release](https://img.shields.io/github/v/release/snakkarike/openmediavault-themekit)](https://github.com/snakkarike/openmediavault-themekit/releases)
+[![GitHub Downloads](https://img.shields.io/github/downloads/snakkarike/openmediavault-themekit/total)](https://github.com/snakkarike/openmediavault-themekit/releases)
+[![GitHub Stars](https://img.shields.io/github/stars/snakkarike/openmediavault-themekit)](https://github.com/snakkarike/openmediavault-themekit/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/snakkarike/openmediavault-themekit)](https://github.com/snakkarike/openmediavault-themekit/issues)
+
 An OMV 8 plugin: a "Theme Kit" page under System that allows you to deeply customize the OpenMediaVault UI.
 Features include customizing the accent color using a massive Tailwind color palette, applying a variety of gorgeous community themes, injecting Google Fonts for custom typography, and writing your own custom CSS.
 
