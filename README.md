@@ -177,3 +177,11 @@ Once that completes successfully, do a hard refresh (`Ctrl+Shift+R`) in the OMV 
 ```bash
 sudo apt purge openmediavault-themekit
 ```
+
+<div>
+  <i>*Maintained with ❤️ for the homelab community.*</i>
+  <br/><br/>
+  <a href="https://buymeacoffee.com/snakkarike" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 145px !important;" >
+  </a>
+</div>
